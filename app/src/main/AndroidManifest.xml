@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.profitness">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProFitness">
+        <activity android:name=".WeightTracker" />
+        <activity
+            android:name=".Diet"
+            android:parentActivityName=".Menu" />
+        <activity android:name=".MaintainWeight" />
+        <activity android:name=".LoseWeight" />
+        <activity
+            android:name=".TrackProgress"
+            android:parentActivityName=".Menu" />
+        <activity android:name=".GainMuscle" />
+        <activity
+            android:name=".TrapeziusExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".CalvesExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".BackExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".GlutesExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".QuadricepExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".HamstringExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".ShouldersExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".TricepExercises"
+            android:parentActivityName=".TricepExercises" />
+        <activity
+            android:name=".BicepExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".AbsExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".ChestExercises"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".Workouts"
+            android:parentActivityName=".Menu" />
+        <activity
+            android:name=".Profile"
+            android:parentActivityName=".Menu" />
+        <activity
+            android:name=".HIT"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".BodyWeight"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".ResistanceBands"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".Stretches"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".Cardio"
+            android:parentActivityName=".ViewExercises" />
+        <activity
+            android:name=".Advice"
+            android:parentActivityName=".Menu" />
+        <activity
+            android:name=".ViewExercises"
+            android:parentActivityName=".Menu" />
+        <activity android:name=".Menu" />
+        <activity android:name=".Register" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

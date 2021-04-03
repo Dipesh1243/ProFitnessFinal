@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="View a range of exercises "
+        android:textColor="#2196F3"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/exercise1"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:paddingVertical="15dp"
+                    android:text="Cardio"
+                    android:textColor="#2196F3"
+                    android:textSize="35dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/exercise2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:paddingVertical="15dp"
+                    android:text="Stretches"
+                    android:textColor="#2196F3"
+                    android:textSize="35dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/exercise3"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:paddingVertical="15dp"
+                    android:text="Resistance Bands"
+                    android:textColor="#2196F3"
+                    android:textSize="35dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/exercise4"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:paddingVertical="15dp"
+                    android:text="Bodyweight Exercises"
+                    android:textColor="#2196F3"
+                    android:textSize="35dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/exercise5"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:paddingVertical="15dp"
+                    android:paddingLeft="10dp"
+                    android:text="HIIT Exercises"
+                    android:textColor="#2196F3"
+                    android:textSize="35dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Main Muscle Groups"
+        android:textColor="#2196F3"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise6"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Chest"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/chest" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise7"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Abdominal"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/abs" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise8"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Biceps"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/biceps" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise9"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Triceps"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/tricep" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise10"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Shoulders"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/shoulder" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise11"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Hamstrings"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/hamstring" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+            <TextView
+                android:id="@+id/exercise12"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/login"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Quadriceps"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textColor="#2196F3" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="85dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/quadricep" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise13"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Glutes"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/glute" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise14"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Back"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/back" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Accessory Muscle Groups"
+        android:textColor="#2196F3"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise15"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Calves"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/calves" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/exercise16"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Trapezius"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="#2196F3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/trapz" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

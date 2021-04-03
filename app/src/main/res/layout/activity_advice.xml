@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:paddingBottom="30dp"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="About ProFitness"
+            android:textColor="#03A9F4"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/app"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/faq1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Who Are We?"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:paddingVertical="15dp"
+            android:textColorHint="#03A9F4"
+            android:paddingLeft="10dp"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We are ProFitness, UK's number 1 fitness application. We aim to help you achieve your goals with the help of our amazing features.
+Take advantage of our wide range of exclusive workout plans as well as our impressive dieting tips and advice to help you achieve the physique you want. "
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/faq1"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/faq2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What Motivates Us?"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:paddingVertical="15dp"
+            android:textColorHint="#03A9F4"
+            android:paddingLeft="10dp"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Our main focus at ProFitness is to ensure our customers satisfication. We continuously maintain and update our features
+to make sure all our customers are happy and are able to reach their desired goal."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/faq2"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/faq3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Our Key Values"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:paddingVertical="15dp"
+            android:textColorHint="#03A9F4"
+            android:paddingLeft="10dp"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:id="@+id/val1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Win at all costs."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/faq3"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/val2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Lead by example."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/val1"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/val3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Achieving ultimate human performance."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/val2"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/val4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Helping the most people we can."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/val3"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/val5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. Cultivate growth"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/val4"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"/>
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/faq4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Want more information?"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:paddingVertical="15dp"
+            android:textColorHint="#03A9F4"
+            android:paddingLeft="10dp"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:id="@+id/contactemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Contact us: dipeshgohil@hotmail.com"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/faq4"
+            android:paddingLeft="10dp"
+            android:paddingBottom="30dp"
+            android:paddingRight="10dp"/>
+
+
+    </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
