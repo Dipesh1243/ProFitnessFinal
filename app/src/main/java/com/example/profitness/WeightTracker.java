@@ -70,7 +70,7 @@ public class WeightTracker extends AppCompatActivity {
                 retrieveData();
             }
         });
-        
+        //hi
         retrieveData();
 
     }
