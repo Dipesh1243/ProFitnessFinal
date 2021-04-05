@@ -3,15 +3,25 @@ package com.example.profitness;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.IValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.utils.EntryXComparator;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,12 +33,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class WeightTracker extends AppCompatActivity {
 
     EditText ed1,ed2;
     Button bt1;
     LineChart lineChart;
+    DatePickerDialog.OnDateSetListener setListener;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -53,6 +65,30 @@ public class WeightTracker extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
+        Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+//        ed1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                DatePickerDialog datePickerDialog = new DatePickerDialog(
+//                        WeightTracker.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+//                        setListener,year,month,day);
+//                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                datePickerDialog.show();
+//            }
+//        });
+//
+//        setListener = new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//                month = month+1;
+//                String date = day + "/" + month + "/" + year;
+//                ed1.setText(date);
+//            }
+//        };
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Chart Values");
@@ -70,7 +106,7 @@ public class WeightTracker extends AppCompatActivity {
                 retrieveData();
             }
         });
-        
+
         retrieveData();
 
     }
@@ -106,14 +142,25 @@ public class WeightTracker extends AppCompatActivity {
 
     private void showChart(ArrayList<Entry> dataVals) {
     lineDataSet.setValues(dataVals);
-    lineDataSet.setLabel("data set 1");
+    lineDataSet.setLabel("Weight");
+        lineDataSet.setDrawFilled(true);
+        lineDataSet.setFillColor(Color.parseColor("#03A9F4"));
+        lineDataSet.setValueTextSize(12);
+        lineDataSet.setColor(Color.parseColor("#03A9F4"));
+        lineDataSet.setDrawCircles(true);
+        lineDataSet.setCircleColor(Color.parseColor("#03A9F4"));
+        lineDataSet.setCircleHoleColor(Color.parseColor("#03A9F4"));
+        lineDataSet.setCircleRadius(3);
+        lineDataSet.setDrawValues(false);
     iLineDataSets.clear();
     iLineDataSets.add(lineDataSet);
     lineData = new LineData(iLineDataSets);
     lineChart.clear();
     lineChart.setData(lineData);
     lineChart.invalidate();
+
+
+
+
     }
-
-
 }

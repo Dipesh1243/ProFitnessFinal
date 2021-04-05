@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -62,17 +63,47 @@ public class TrackProgress extends AppCompatActivity {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Workout Completed");
 
 
-        reference.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
+
+
+        reference.child(firebaseUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot ds : snapshot.getChildren()){
                     list.add(ds.getKey());
+
+                    trackProgressAdapter = new TrackProgressAdapter(list);
+                    rv1.setAdapter(trackProgressAdapter);
+
+                    trackProgressAdapter.setOnItemClickListener(new TrackProgressAdapter.OnItemClickListener() {
+                        @Override
+                        public void OnItemClick(int position) {
+                            String listpos = list.get(position);
+
+                            if (listpos.contains("GainMuscle")) {
+                                Intent i = new Intent(TrackProgress.this, GainMuscle.class);
+                                startActivity(i);
+                            }
+                            if (listpos.contains("LoseWeight")) {
+                                Intent i = new Intent(TrackProgress.this, LoseWeight.class);
+                                startActivity(i);
+                            }
+                            if (listpos.contains("MaintainWeight")) {
+                                Intent i = new Intent(TrackProgress.this, MaintainWeight.class);
+                                startActivity(i);
+                            }
+
+                        }
+
+                        @Override
+                        public void OnDeleteClick(int position) {
+                            String listpos = list.get(position);
+                            reference.child(firebaseUser.getUid()).child(listpos).removeValue();
+                            list.remove(position);
+                            trackProgressAdapter.notifyItemRemoved(position);
+
+                        }
+                    });
                 }
-                trackProgressAdapter = new TrackProgressAdapter(list);
-                rv1.setAdapter(trackProgressAdapter);
-
-
-
             }
 
             @Override
@@ -81,4 +112,5 @@ public class TrackProgress extends AppCompatActivity {
             }
         });
     }
+
 }

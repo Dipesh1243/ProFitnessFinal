@@ -54,7 +54,7 @@
         android:layout_toRightOf="@+id/returnback"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:backgroundTint="#03A9F4"
+        android:backgroundTint="@drawable/completebutton"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Completed"
         android:textAllCaps="false" />

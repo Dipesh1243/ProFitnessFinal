@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -48,7 +50,7 @@ public class Cardio extends AppCompatActivity {
 
     }
 
-    public void CreateCardioList(){
+    public void CreateCardioList() {
 
         cardioList = new ArrayList<>();
         cardioList.add(new CardioItems(R.drawable.jumprope, "Jump Rope", "Equipment: Skipping Rope"));
@@ -65,7 +67,7 @@ public class Cardio extends AppCompatActivity {
         cardioList.add(new CardioItems(R.drawable.arctrainer, "Arc Trainer", "Equipment: Gym"));
     }
 
-    public void BuildRecyclerView(){
+    public void BuildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
@@ -73,12 +75,34 @@ public class Cardio extends AppCompatActivity {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+
+        mAdapter.setOnItemClickListener(new CardioAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(int position) {
+                CardioItems cardioItems = cardioList.get(position);
+
+
+                if (cardioItems.getMtext1().contains("Jump Rope")) {
+                    Toast.makeText(Cardio.this, "JUMP", Toast.LENGTH_SHORT).show();
+                }
+                if (cardioItems.getMtext1().contains("Swimming")) {
+
+                    Toast.makeText(Cardio.this, "SWIM", Toast.LENGTH_SHORT).show();
+                }
+
+                if (cardioItems.getMtext1().contains("Boxing")) {
+
+                    Toast.makeText(Cardio.this, "box", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
     }
 
-    private void filter(String text){
+    private void filter(String text) {
         ArrayList<CardioItems> filteredList = new ArrayList<>();
-        for (CardioItems item : cardioList){
-            if (item.getMtext1().toLowerCase().contains(text.toLowerCase()) | item.getMtext2().toLowerCase().contains(text.toLowerCase())){
+        for (CardioItems item : cardioList) {
+            if (item.getMtext1().toLowerCase().contains(text.toLowerCase()) | item.getMtext2().toLowerCase().contains(text.toLowerCase())) {
                 filteredList.add(item);
             }
         }

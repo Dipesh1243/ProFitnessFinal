@@ -19,19 +19,11 @@
             android:layout_height="65dp"
             android:background="@drawable/login"
             android:fontFamily="sans-serif-condensed-medium"
-            android:hint=" X value"
+            android:hint="Select Date"
             android:inputType="textEmailAddress"
             android:paddingVertical="15dp"
-            android:paddingLeft="60dp"
+            android:paddingLeft="10dp"
             android:textColorHint="#03A9F4" />
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/email" />
 
     </RelativeLayout>
 
@@ -46,19 +38,10 @@
             android:layout_height="65dp"
             android:background="@drawable/login"
             android:fontFamily="sans-serif-condensed-medium"
-            android:hint="Y value"
-            android:inputType="textPassword"
+            android:hint="Weight in KG"
             android:paddingVertical="15dp"
-            android:paddingLeft="60dp"
+            android:paddingLeft="10dp"
             android:textColorHint="#03A9F4" />
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/password" />
 
     </RelativeLayout>
 
@@ -76,7 +59,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="40dp"
         android:baselineAligned="false"
         android:gravity="center"
         android:orientation="horizontal">
@@ -88,6 +70,7 @@
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/linechart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"/>
 
 </LinearLayout>

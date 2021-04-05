@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ClipData;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.data.Entry;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -34,6 +36,8 @@ public class GainMuscle extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
+
+
 
 
 
@@ -70,6 +74,30 @@ public class GainMuscle extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
+
+
+        reference.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot ds : snapshot.getChildren()){
+
+                    if (ds.getKey().equals("GainMuscle")){
+                        bt1.setText("Completed");
+                        bt1.setBackgroundColor(Color.parseColor("#4CAF50"));
+                    }
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +111,8 @@ public class GainMuscle extends AppCompatActivity {
             }
         });
 
+
+
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +121,8 @@ public class GainMuscle extends AppCompatActivity {
                 startActivity(i);
 
             }
+
+
         });
     }
 }
