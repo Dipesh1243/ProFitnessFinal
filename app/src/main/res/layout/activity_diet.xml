@@ -85,12 +85,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Popular this week:"
+                    android:text="Select Meal:"
                     android:textColor="#03A9F4"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-condensed-medium"/>
-
-
 
             </LinearLayout>
 
@@ -100,20 +98,7 @@
                 android:layout_height="200dp"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recommended for you:"
-                android:textColor="#03A9F4"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-condensed-medium"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recommended"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
 
             <TextView
                 android:layout_width="wrap_content"

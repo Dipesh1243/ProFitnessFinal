@@ -9,7 +9,10 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.github.barteksc.pdfviewer.PDFView;
 
 import java.util.ArrayList;
 
@@ -19,13 +22,13 @@ public class Cardio extends AppCompatActivity {
     private CardioAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cardio);
         getSupportActionBar().setTitle("View More Exercises");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
         CreateCardioList();
         BuildRecyclerView();
@@ -84,10 +87,17 @@ public class Cardio extends AppCompatActivity {
 
                 if (cardioItems.getMtext1().contains("Jump Rope")) {
                     Toast.makeText(Cardio.this, "JUMP", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Cardio.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.alfredo);
+                    startActivity(i);
                 }
                 if (cardioItems.getMtext1().contains("Swimming")) {
 
                     Toast.makeText(Cardio.this, "SWIM", Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(Cardio.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.weightedpushup);
+                    startActivity(i);
                 }
 
                 if (cardioItems.getMtext1().contains("Boxing")) {

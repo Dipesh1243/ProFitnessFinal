@@ -75,47 +75,41 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="Food Eaten:"
-            android:textColor="#03A9F4"
-            android:textSize="30dp"
-            android:textStyle="bold" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/trackfood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rbsearch"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginBottom="30dp"
-            android:scrollbars="vertical"
-            />
-
-    </RelativeLayout>
-
             <Button
                 android:id="@+id/example"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Track Weight"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#03A9F4"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/example2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Track BMI"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#03A9F4"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/example3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Track time in Gym"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#03A9F4"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/example4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Jog"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#03A9F4"
                 android:fontFamily="sans-serif-condensed-medium"

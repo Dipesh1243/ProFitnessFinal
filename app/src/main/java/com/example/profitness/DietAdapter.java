@@ -13,6 +13,15 @@ import java.util.ArrayList;
 
 public class DietAdapter extends RecyclerView.Adapter<DietAdapter.DietAdapterViewHolder> {
     private ArrayList<GainMuscleItems> mMuscleList;
+    public OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void OnItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public static class DietAdapterViewHolder extends RecyclerView.ViewHolder{
 
@@ -20,10 +29,22 @@ public class DietAdapter extends RecyclerView.Adapter<DietAdapter.DietAdapterVie
         public TextView mTextView1;
 
 
-        public DietAdapterViewHolder(@NonNull View itemView) {
+        public DietAdapterViewHolder(@NonNull View itemView, OnItemClickListener listener) {
             super(itemView);
             mImageView = itemView.findViewById(R.id.foodmenu);
             mTextView1 = itemView.findViewById(R.id.food);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            listener.OnItemClick(position);
+                        }
+                    }
+                }
+            });
 
         }
     }
@@ -35,7 +56,7 @@ public class DietAdapter extends RecyclerView.Adapter<DietAdapter.DietAdapterVie
     @Override
     public DietAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.dietrv, parent, false);
-        DietAdapterViewHolder cvh = new DietAdapterViewHolder(v);
+        DietAdapterViewHolder cvh = new DietAdapterViewHolder(v, mListener);
         return cvh;
     }
 

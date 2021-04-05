@@ -4,18 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class Diet extends AppCompatActivity {
     private ArrayList<GainMuscleItems> gmList;
-    private RecyclerView mRecyclerView, recyclerView2, recyclerView3;
+    private RecyclerView mRecyclerView, recyclerView3;
     private DietAdapter mAdapter;
-            private DietAdapter2 adapter2;
+
             private GainMuscleAdapter adapter3;
 
     private RecyclerView.LayoutManager mLayoutManager, layoutManager2, layoutManager3;
@@ -33,7 +35,7 @@ public class Diet extends AppCompatActivity {
 
 
         recyclerview1();
-        recyclerview2();
+
         recyclerview3();
 
         EditText editText = findViewById(R.id.searchfood);
@@ -62,7 +64,7 @@ public class Diet extends AppCompatActivity {
         gmList.add(new GainMuscleItems(R.drawable.pastachicken, "Pasta and Chicken", ""));
         gmList.add(new GainMuscleItems(R.drawable.ricepork, "Crispy Pork", ""));
         gmList.add(new GainMuscleItems(R.drawable.salmon, "Salmon & Veg", ""));
-        gmList.add(new GainMuscleItems(R.drawable.crabchilli, "Crab & Chilli ", ""));
+        gmList.add(new GainMuscleItems(R.drawable.crabchilli, "Crab & Chilli", ""));
         gmList.add(new GainMuscleItems(R.drawable.roastchicken, "Roast Chicken", ""));
 
 
@@ -73,27 +75,61 @@ public class Diet extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
+        mAdapter.setOnItemClickListener(new DietAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(int position) {
+                GainMuscleItems fooditems1 = gmList.get(position);
+
+
+                if (fooditems1.getMtext1().contains("Rice and Chicken")) {
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food1);
+                    startActivity(i);
+                }
+                if (fooditems1.getMtext1().contains("Pasta and Chicken")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food2);
+                    startActivity(i);
+                }
+
+                if (fooditems1.getMtext1().contains("Crispy Pork")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food3);
+                    startActivity(i);
+
+                }
+
+                if (fooditems1.getMtext1().contains("Salmon & Veg")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food4);
+                    startActivity(i);
+
+                }
+
+                if (fooditems1.getMtext1().contains("Crab & Chilli")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food5);
+                    startActivity(i);
+
+                }
+
+                if (fooditems1.getMtext1().contains("Roast Chicken")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food6);
+                    startActivity(i);
+
+                }
+            }
+        });
+
     }
 
-    public void recyclerview2(){
-        gmList = new ArrayList<>();
 
-        gmList.add(new GainMuscleItems(R.drawable.rigatoni, "Rigatoni & Spicy Sausage", ""));
-        gmList.add(new GainMuscleItems(R.drawable.mapo, "Ma Po Tofu Noodles", ""));
-        gmList.add(new GainMuscleItems(R.drawable.tilapia, "Pan-fried Pilapia", ""));
-        gmList.add(new GainMuscleItems(R.drawable.stuffedpepper, "Stuffed Peppers", ""));
-        gmList.add(new GainMuscleItems(R.drawable.caprese, "Caprese Zoodles", ""));
-        gmList.add(new GainMuscleItems(R.drawable.alfredo, "Skinny Alfredo", ""));
-
-
-        recyclerView2 = findViewById(R.id.recommended);
-        recyclerView2.setHasFixedSize(true);
-        layoutManager2 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        adapter2 = new DietAdapter2(gmList);
-        recyclerView2.setLayoutManager(layoutManager2);
-        recyclerView2.setAdapter(adapter2);
-
-    }
 
     public void recyclerview3(){
         gmList = new ArrayList<>();
@@ -118,6 +154,20 @@ public class Diet extends AppCompatActivity {
         adapter3 = new GainMuscleAdapter(gmList);
         recyclerView3.setLayoutManager(layoutManager3);
         recyclerView3.setAdapter(adapter3);
+
+        adapter3.setOnItemClickListener(new GainMuscleAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(int position) {
+                GainMuscleItems fooditems2 = gmList.get(position);
+
+                if (fooditems2.getMtext1().contains("Rigatoni & Spicy Sausage")) {
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food7);
+                    startActivity(i);
+
+                }
+            }
+        });
 
     }
 
