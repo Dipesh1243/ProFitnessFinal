@@ -79,15 +79,15 @@ public class TrackProgress extends AppCompatActivity {
                         public void OnItemClick(int position) {
                             String listpos = list.get(position);
 
-                            if (listpos.contains("GainMuscle")) {
+                            if (listpos.contains("Gain Muscle")) {
                                 Intent i = new Intent(TrackProgress.this, GainMuscle.class);
                                 startActivity(i);
                             }
-                            if (listpos.contains("LoseWeight")) {
+                            if (listpos.contains("Lose Weight")) {
                                 Intent i = new Intent(TrackProgress.this, LoseWeight.class);
                                 startActivity(i);
                             }
-                            if (listpos.contains("MaintainWeight")) {
+                            if (listpos.contains("Maintain Weight")) {
                                 Intent i = new Intent(TrackProgress.this, MaintainWeight.class);
                                 startActivity(i);
                             }

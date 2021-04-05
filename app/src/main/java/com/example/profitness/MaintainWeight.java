@@ -68,7 +68,7 @@ public class MaintainWeight extends AppCompatActivity {
             public void onClick(View v) {
                 ArrayList<String> item = new ArrayList<>();
 
-                reference.child(firebaseUser.getUid()).child("MaintainWeight").setValue(true);
+                reference.child(firebaseUser.getUid()).child("Maintain Weight").setValue(true);
                 Intent i = new Intent(MaintainWeight.this, Menu.class);
                 startActivity(i);
                 Toast.makeText(MaintainWeight.this,"You have completed this workout",Toast.LENGTH_SHORT).show();
@@ -81,7 +81,7 @@ public class MaintainWeight extends AppCompatActivity {
 
                 for (DataSnapshot ds : snapshot.getChildren()){
 
-                    if (ds.getKey().equals("MaintainWeight")){
+                    if (ds.getKey().equals("Maintain Weight")){
                         bt1.setText("Completed");
                         bt1.setBackgroundColor(Color.parseColor("#4CAF50"));
                     }

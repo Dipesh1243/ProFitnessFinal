@@ -82,7 +82,7 @@ public class GainMuscle extends AppCompatActivity {
 
                 for (DataSnapshot ds : snapshot.getChildren()){
 
-                    if (ds.getKey().equals("GainMuscle")){
+                    if (ds.getKey().equals("Gain Muscle")){
                         bt1.setText("Completed");
                         bt1.setBackgroundColor(Color.parseColor("#4CAF50"));
                     }
@@ -103,7 +103,7 @@ public class GainMuscle extends AppCompatActivity {
             public void onClick(View v) {
                 ArrayList<String> item = new ArrayList<>();
 
-                reference.child(firebaseUser.getUid()).child("GainMuscle").setValue(true);
+                reference.child(firebaseUser.getUid()).child("Gain Muscle").setValue(true);
 
                 Toast.makeText(GainMuscle.this,"You have completed this workout",Toast.LENGTH_SHORT).show();
                  Intent i = new Intent(GainMuscle.this, Menu.class);

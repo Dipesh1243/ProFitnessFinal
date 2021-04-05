@@ -68,7 +68,7 @@ public class LoseWeight extends AppCompatActivity {
             public void onClick(View v) {
                 ArrayList<String> item = new ArrayList<>();
 
-                reference.child(firebaseUser.getUid()).child("LoseWeight").setValue(true);
+                reference.child(firebaseUser.getUid()).child("Lose Weight").setValue(true);
 
                 Intent i = new Intent(LoseWeight.this, Menu.class);
                 startActivity(i);
@@ -82,7 +82,7 @@ public class LoseWeight extends AppCompatActivity {
 
                 for (DataSnapshot ds : snapshot.getChildren()){
 
-                    if (ds.getKey().equals("LoseWeight")){
+                    if (ds.getKey().equals("Lose Weight")){
                         bt1.setText("Completed");
                         bt1.setBackgroundColor(Color.parseColor("#4CAF50"));
                     }
