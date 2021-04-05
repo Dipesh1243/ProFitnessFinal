@@ -160,11 +160,85 @@ public class Diet extends AppCompatActivity {
             public void OnItemClick(int position) {
                 GainMuscleItems fooditems2 = gmList.get(position);
 
+                if (fooditems2.getMtext1().contains("Rice and Chicken")) {
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food1);
+                    startActivity(i);
+                }
+                if (fooditems2.getMtext1().contains("Pasta and Chicken")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food2);
+                    startActivity(i);
+                }
+
+                if (fooditems2.getMtext1().contains("Crispy Pork")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food3);
+                    startActivity(i);
+
+                }
+
+                if (fooditems2.getMtext1().contains("Salmon & Veg")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food4);
+                    startActivity(i);
+
+                }
+
+                if (fooditems2.getMtext1().contains("Crab & Chilli")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food5);
+                    startActivity(i);
+
+                }
+
+                if (fooditems2.getMtext1().contains("Roast Chicken")) {
+
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food6);
+                    startActivity(i);
+
+                }
+
                 if (fooditems2.getMtext1().contains("Rigatoni & Spicy Sausage")) {
                     Intent i = new Intent(Diet.this, FoodIngredients.class);
                     i.putExtra("my_image", R.drawable.food7);
                     startActivity(i);
 
+                }
+
+                if (fooditems2.getMtext1().contains("Ma Po Tofu Noodles")) {
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food8);
+                    startActivity(i);
+                }
+
+                if (fooditems2.getMtext1().contains("Pan-fried Pilapia")) {
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food9);
+                    startActivity(i);
+                }
+
+                if (fooditems2.getMtext1().contains("Stuffed Peppers")) {
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food10);
+                    startActivity(i);
+                }
+
+                if (fooditems2.getMtext1().contains("Caprese Zoodles")) {
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food11);
+                    startActivity(i);
+                }
+
+                if (fooditems2.getMtext1().contains("Skinny Alfredo")) {
+                    Intent i = new Intent(Diet.this, FoodIngredients.class);
+                    i.putExtra("my_image", R.drawable.food12);
+                    startActivity(i);
                 }
             }
         });
@@ -180,6 +254,7 @@ public class Diet extends AppCompatActivity {
         }
 
         mAdapter.test(filteredList);
+
 
     }
 
