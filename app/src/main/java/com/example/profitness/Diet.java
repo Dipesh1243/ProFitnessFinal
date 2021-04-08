@@ -80,7 +80,6 @@ public class Diet extends AppCompatActivity {
             public void OnItemClick(int position) {
                 GainMuscleItems fooditems1 = gmList.get(position);
 
-
                 if (fooditems1.getMtext1().contains("Rice and Chicken")) {
                     Intent i = new Intent(Diet.this, FoodIngredients.class);
                     i.putExtra("my_image", R.drawable.food1);
@@ -251,11 +250,9 @@ public class Diet extends AppCompatActivity {
             if (item.getMtext1().toLowerCase().contains(text.toLowerCase())){
                 filteredList.add(item);
             }
+
         }
-
         mAdapter.test(filteredList);
-
-
     }
 
 }

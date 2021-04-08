@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/profiletitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="BMI Calculator"
+            android:textColor="#03A9F4"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/app"
+            android:layout_below="@+id/profiletitle"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText
+            android:id="@+id/heightbmi"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:paddingLeft="10dp"
+            android:hint="Height"
+            android:textSize="20dp"
+            android:textColor="#03A9F4"
+            app:suffix=" cm"
+            android:background="@drawable/login"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText
+            android:id="@+id/weightbmi"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:paddingLeft="10dp"
+            android:hint="Weight"
+            android:textSize="20dp"
+            android:textColor="#03A9F4"
+            app:suffix=" kg"
+            android:background="@drawable/login"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/weight"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"/>
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Calculate BMI"
+        android:textAllCaps="false" />
+
+
+    <EditText
+        android:id="@+id/yourbmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Your BMI"
+        android:textSize="40dp" />
+
+</LinearLayout>

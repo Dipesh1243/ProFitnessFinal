@@ -114,14 +114,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp">
 
-        <EditText
+        <com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText
             android:id="@+id/height"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:hint="Height"
             android:paddingVertical="15dp"
             android:textColorHint="#03A9F4"
-
+            app:suffix=" cm"
             android:paddingLeft="60dp"
             android:background="@drawable/login"
             android:fontFamily="sans-serif-condensed-medium"/>
@@ -141,14 +141,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp">
 
-        <EditText
+        <com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText
             android:id="@+id/weight"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:hint="Weight"
             android:paddingVertical="15dp"
             android:textColorHint="#03A9F4"
-
+            app:suffix=" kg"
             android:paddingLeft="60dp"
             android:background="@drawable/login"
             android:fontFamily="sans-serif-condensed-medium"/>
@@ -269,7 +269,7 @@
             android:id="@+id/signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already Have An Acco unt ? Sign In"
+            android:text="Already Have An Account ? Sign In"
             android:textColor="#03A9F4"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed-medium"/>

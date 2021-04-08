@@ -86,7 +86,7 @@
                 android:textAllCaps="false"/>
 
             <Button
-                android:id="@+id/example2"
+                android:id="@+id/bmi"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Track BMI"
@@ -96,24 +96,15 @@
                 android:textAllCaps="false"/>
 
             <Button
-                android:id="@+id/example3"
+                android:id="@+id/stopwatch"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Track time in Gym"
+                android:text="Stop Watch"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#03A9F4"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textAllCaps="false"/>
 
-            <Button
-                android:id="@+id/example4"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="Jog"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="#03A9F4"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textAllCaps="false"/>
 
         </LinearLayout>
 

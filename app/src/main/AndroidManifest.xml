@@ -11,10 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProFitness">
-        <activity android:name=".FoodIngredients"
-            android:parentActivityName=".Diet">
-
-        </activity>
+        <activity android:name=".Stopwatch"></activity>
+        <activity
+            android:name=".BMI"
+            android:parentActivityName=".TrackProgress"></activity>
+        <activity
+            android:name=".FoodIngredients"
+            android:parentActivityName=".Diet" />
         <activity android:name=".WeightTracker" />
         <activity
             android:name=".Diet"

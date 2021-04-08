@@ -32,7 +32,7 @@ public class TrackProgress extends AppCompatActivity {
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
     ArrayList<String> list;
-    Button bt1;
+    Button bt1,bt2,bt3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,8 @@ public class TrackProgress extends AppCompatActivity {
         rv1.setLayoutManager(new LinearLayoutManager(this));
 
         bt1 = findViewById(R.id.example);
+        bt2 = findViewById(R.id.bmi);
+        bt3 = findViewById(R.id.stopwatch);
 
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,22 @@ public class TrackProgress extends AppCompatActivity {
                 startActivity(i2);
             }
         });
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(TrackProgress.this, BMI.class);
+                startActivity(i2);
+            }
+        });
+
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(TrackProgress.this, Stopwatch.class);
+                startActivity(i2);
+            }
+        });
+
 
         list = new ArrayList<>();
 

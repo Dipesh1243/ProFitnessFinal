@@ -15,10 +15,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText;
 
 public class Register extends AppCompatActivity {
 
-    EditText emailID, password, confirmpassword, fullname,age, height, weight;
+    EditText emailID, password, confirmpassword, fullname,age;
+    PrefixSuffixEditText height, weight;
     Button btnRegister;
     TextView tvSignin;
     FirebaseAuth mFirebaseAuth;
@@ -64,6 +66,27 @@ public class Register extends AppCompatActivity {
                     emailID.setError("Please enter Email Address");
                     emailID.requestFocus();
                 }
+
+                if(fn.isEmpty()){
+                    fullname.setError("Please enter fullname");
+                    fullname.requestFocus();
+                }
+
+                if(agenum.isEmpty()){
+                    age.setError("Please enter age");
+                    age.requestFocus();
+                }
+
+                if(heightr.isEmpty()){
+                    height.setError("Please enter height ");
+                    height.requestFocus();
+                }
+
+                if(weightr.isEmpty()){
+                    weight.setError("Please enter weight ");
+                    weight.requestFocus();
+                }
+
                 else if(pwd.isEmpty()){
                     password.setError("Please enter Password");
                     password.requestFocus();
@@ -80,7 +103,7 @@ public class Register extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(Register.this,"Login Unsuccessful",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Register.this,"Account already exists",Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 FirebaseUser user = mFirebaseAuth.getCurrentUser();
