@@ -3,6 +3,7 @@
     package="com.example.profitness">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProFitness">
+        <activity android:name=".Webview"></activity>
         <activity android:name=".WorkoutVideo" />
         <activity android:name=".Stopwatch" />
         <activity

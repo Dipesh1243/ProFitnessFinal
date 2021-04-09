@@ -94,14 +94,14 @@ public class BodyWeight extends AppCompatActivity {
             }
         });
 
-//        cd8.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(BodyWeight.this, WorkoutVideo.class);
-//                i.putExtra("my_image", R.raw.mountainclimbers);
-//                startActivity(i);
-//            }
-//        });
+        cd8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(BodyWeight.this, WorkoutVideo.class);
+                i.putExtra("my_image", R.raw.wallsits);
+                startActivity(i);
+            }
+        });
 
 
         cd9.setOnClickListener(new View.OnClickListener() {

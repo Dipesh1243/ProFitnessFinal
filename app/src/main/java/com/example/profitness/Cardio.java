@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -67,7 +68,7 @@ public class Cardio extends AppCompatActivity {
         cardioList.add(new CardioItems(R.drawable.stairclimber, "Stair Climber", "Equipment: Gym"));
         cardioList.add(new CardioItems(R.drawable.treadmill, "Treadmill", "Equipment: Gym"));
         cardioList.add(new CardioItems(R.drawable.spinbike, "Spin Bike", "Equipment: Gym"));
-        cardioList.add(new CardioItems(R.drawable.arctrainer, "Arc Trainer", "Equipment: Gym"));
+
     }
 
     public void BuildRecyclerView() {
@@ -85,25 +86,70 @@ public class Cardio extends AppCompatActivity {
                 CardioItems cardioItems = cardioList.get(position);
 
                 if (cardioItems.getMtext1().contains("Jump Rope")) {
-                    Toast.makeText(Cardio.this, "JUMP", Toast.LENGTH_SHORT).show();
-                    //Intent i = new Intent(Cardio.this, CardioVideos.class);
-                   //i.putExtra("my_image", R.drawable.alfredo);
-                   // startActivity(i);
+
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "jump");
+                    startActivity(i);
                 }
 
                 if (cardioItems.getMtext1().contains("Swimming")) {
 
-                    Toast.makeText(Cardio.this, "SWIM", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "swim");
+                    startActivity(i);
+                }
 
-                    Intent i = new Intent(Cardio.this, FoodIngredients.class);
-                    i.putExtra("my_image", R.drawable.weightedpushup);
+                if (cardioItems.getMtext1().contains("Outdoor Jogging")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "jog");
                     startActivity(i);
                 }
 
                 if (cardioItems.getMtext1().contains("Boxing")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "box");
+                    startActivity(i);
+                }
 
-                    Toast.makeText(Cardio.this, "box", Toast.LENGTH_SHORT).show();
+                if (cardioItems.getMtext1().contains("Cycling")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "cycle");
+                    startActivity(i);
+                }
 
+                if (cardioItems.getMtext1().contains("Power Walking")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "powerwalk");
+                    startActivity(i);
+                }
+
+                if (cardioItems.getMtext1().contains("Rowing")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "rowing");
+                    startActivity(i);
+                }
+
+                if (cardioItems.getMtext1().contains("Elliptical")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "elliptical");
+                    startActivity(i);
+                }
+
+                if (cardioItems.getMtext1().contains("Stair Climber")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "stairs");
+                    startActivity(i);
+                }
+
+                if (cardioItems.getMtext1().contains("Treadmill")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "treadmill");
+                    startActivity(i);
+                }
+                if (cardioItems.getMtext1().contains("Spin Bike")) {
+                    Intent i = new Intent(Cardio.this, Webview.class);
+                    i.putExtra("my_image", "spinbike");
+                    startActivity(i);
                 }
             }
         });
@@ -116,7 +162,6 @@ public class Cardio extends AppCompatActivity {
                 filteredList.add(item);
             }
         }
-
         mAdapter.test(filteredList);
     }
 
