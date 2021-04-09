@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -68,6 +69,25 @@ public class ResistanceBands extends AppCompatActivity {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+
+        mAdapter.setOnItemClickListener(new ResistanceBandsAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(int position) {
+                ResistanceBandsItems fooditems1 = rbList.get(position);
+
+                if (fooditems1.getMtext1().contains("Front Shoulders")) {
+                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+                    i.putExtra("my_image", R.raw.rbfrontshoulder);
+                    startActivity(i);
+                }
+
+//                if (fooditems1.getMtext1().contains("Deadlift")) {
+//                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+//                    i.putExtra("my_image", R.raw.deadlift);
+//                    startActivity(i);
+//                }
+            }
+        });
     }
 
     private void filter(String text){

@@ -84,13 +84,13 @@ public class Cardio extends AppCompatActivity {
             public void OnItemClick(int position) {
                 CardioItems cardioItems = cardioList.get(position);
 
-
                 if (cardioItems.getMtext1().contains("Jump Rope")) {
                     Toast.makeText(Cardio.this, "JUMP", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(Cardio.this, FoodIngredients.class);
-                    i.putExtra("my_image", R.drawable.alfredo);
-                    startActivity(i);
+                    //Intent i = new Intent(Cardio.this, CardioVideos.class);
+                   //i.putExtra("my_image", R.drawable.alfredo);
+                   // startActivity(i);
                 }
+
                 if (cardioItems.getMtext1().contains("Swimming")) {
 
                     Toast.makeText(Cardio.this, "SWIM", Toast.LENGTH_SHORT).show();

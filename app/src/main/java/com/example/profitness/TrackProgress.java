@@ -110,6 +110,29 @@ public class TrackProgress extends AppCompatActivity {
                                 startActivity(i);
                             }
 
+                            if (listpos.contains("The Kettlebell Conditioner")) {
+                                Intent i = new Intent(TrackProgress.this, HIT.class);
+                                startActivity(i);
+                            }
+                            if (listpos.contains("The Outdoor Sprinter")) {
+                                Intent i = new Intent(TrackProgress.this, HIT.class);
+                                startActivity(i);
+                            }
+
+                            if (listpos.contains("The Home Fat Burner")) {
+                                Intent i = new Intent(TrackProgress.this, HIT.class);
+                                startActivity(i);
+                            }
+
+                            if (listpos.contains("The Punisher")) {
+                                Intent i = new Intent(TrackProgress.this, HIT.class);
+                                startActivity(i);
+                            }
+                            if (listpos.contains("The Gym HIIT Workout")) {
+                                Intent i = new Intent(TrackProgress.this, HIT.class);
+                                startActivity(i);
+                            }
+                            
                         }
 
                         @Override

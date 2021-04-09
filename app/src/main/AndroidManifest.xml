@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProFitness">
-        <activity android:name=".Stopwatch"></activity>
+        <activity android:name=".WorkoutVideo" />
+        <activity android:name=".Stopwatch" />
         <activity
             android:name=".BMI"
-            android:parentActivityName=".TrackProgress"></activity>
+            android:parentActivityName=".TrackProgress" />
         <activity
             android:name=".FoodIngredients"
             android:parentActivityName=".Diet" />

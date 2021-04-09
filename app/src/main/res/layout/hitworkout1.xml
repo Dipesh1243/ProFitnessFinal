@@ -11,7 +11,7 @@
         android:layout_height="300dp"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@drawable/mainmuscle"
+        android:background="@drawable/login"
         >
         <TextView
             android:layout_width="match_parent"
@@ -66,14 +66,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:gravity="center_horizontal" />
 
-        <Button
-            android:id="@+id/buttonOk"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="Complete"
-            android:textColor="@color/black" />
+
 
     </LinearLayout>
 
