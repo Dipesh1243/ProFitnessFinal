@@ -63,42 +63,27 @@ public class BMI extends AppCompatActivity {
                 float bmi = weightvalue / (heightvalue * heightvalue);
 
 
-//                if (bmi < 16){
-//                    BMIresult = "severly under weight";
-//                } else if (bmi < 18.5){
-//                    BMIresult = "under weight";
-//                }else if (bmi > 18.5 && bmi <= 24.9){
-//                    BMIresult = "Normal";
-//                }else if (bmi >= 25){
-//                    BMIresult = "Overweight";
-//                }
+                if (bmi < 16){
+                    BMIresult = "severly under weight";
+                } else if (bmi < 18.5){
+                    BMIresult = "under weight";
+                }else if (bmi > 18.5 && bmi <= 24.9){
+                    BMIresult = "Normal";
+                }else if (bmi >= 25){
+                    BMIresult = "Overweight";
+                }
 
                 String hello = String.valueOf(bmi);
-                ed1.setText(hello);
-                BMIvalues editedUser = new BMIvalues(hello);
+                ed1.setText(hello + BMIresult);
 
-                reference2.child(firebaseUser.getUid()).setValue(editedUser);
-
-//                reference2.child(firebaseUser.getUid()).setValue(bmi);
-//
-//                reference2.child(firebaseUser.getUid()).child(calc).setValue(true);
+                reference2.child(firebaseUser.getUid()).setValue(hello + BMIresult);
 
 
-                reference2.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        BMIvalues info = snapshot.getValue(BMIvalues.class);
-                        ed1.setText(info.getBmi());
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
 
             }
         });
+
 
         reference.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -108,6 +93,20 @@ public class BMI extends AppCompatActivity {
                 User info = snapshot.getValue(User.class);
                 editText1.setText(info.getHeight());
                 editText2.setText(info.getWeight());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        reference2.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String info = (String) snapshot.getValue();
+                ed1.setText(info);
+
             }
 
             @Override
