@@ -96,6 +96,10 @@ public class Menu extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intToMain = new Intent(Menu.this, MainActivity.class);
                 startActivity(intToMain);
+
+            case R.id.menupie:
+                Intent i1 = new Intent(Menu.this, PieChart.class);
+                startActivity(i1);
         }
         return super.onOptionsItemSelected(item);
     }

@@ -2,16 +2,21 @@ package com.example.profitness;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.MediaController;
 
 public class Webview extends AppCompatActivity {
 
     WebView webView;
+    Button bt1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +24,15 @@ public class Webview extends AppCompatActivity {
         setContentView(R.layout.activity_webview);
 
         webView = findViewById(R.id.webviewvideo);
+        bt1 = findViewById(R.id.backweb);
+
+        bt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(Webview.this, Cardio.class);
+                startActivity(i2);
+            }
+        });
 
 
 

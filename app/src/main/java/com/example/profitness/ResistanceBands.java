@@ -87,9 +87,51 @@ public class ResistanceBands extends AppCompatActivity {
                     startActivity(i);
                 }
 
-                if (fooditems1.getMtext1().contains("Banded Front Squat")) {
+                if (fooditems1.getMtext1().contains("Lateral Walk")) {
                     Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
                     i.putExtra("my_image", R.raw.bandedlatstep);
+                    startActivity(i);
+                }
+
+
+                if (fooditems1.getMtext1().contains("Banded Front Squat")) {
+                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+                    i.putExtra("my_image", R.raw.frontsquat);
+                    startActivity(i);
+                }
+
+                if (fooditems1.getMtext1().contains("Deadlift")) {
+                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+                    i.putExtra("my_image", R.raw.deadlift);
+                    startActivity(i);
+                }
+                if (fooditems1.getMtext1().contains("Shoulder Press")) {
+                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+                    i.putExtra("my_image", R.raw.shoulderpress);
+                    startActivity(i);
+                }
+
+                if (fooditems1.getMtext1().contains("Bicycle Crunch")) {
+                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+                    i.putExtra("my_image", R.raw.shoulderpress);
+                    startActivity(i);
+                }
+
+                if (fooditems1.getMtext1().contains("Tricep Extensions")) {
+                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+                    i.putExtra("my_image", R.raw.tricepextensions);
+                    startActivity(i);
+                }
+
+                if (fooditems1.getMtext1().contains("Leg Row")) {
+                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+                    i.putExtra("my_image", R.raw.legrow);
+                    startActivity(i);
+                }
+
+                if (fooditems1.getMtext1().contains("Mid-Back Row")) {
+                    Intent i = new Intent(ResistanceBands.this, WorkoutVideo.class);
+                    i.putExtra("my_image", R.raw.midbackrow);
                     startActivity(i);
                 }
             }

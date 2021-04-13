@@ -246,12 +246,14 @@ public class Diet extends AppCompatActivity {
 
     private void filter(String text){
         ArrayList<GainMuscleItems> filteredList = new ArrayList<>();
+
         for (GainMuscleItems item : gmList){
             if (item.getMtext1().toLowerCase().contains(text.toLowerCase())){
                 filteredList.add(item);
             }
 
         }
+
         mAdapter.test(filteredList);
     }
 

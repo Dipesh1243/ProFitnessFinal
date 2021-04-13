@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProFitness">
-        <activity android:name=".Webview"></activity>
+        <activity android:name=".PieChart"></activity>
+        <activity android:name=".Webview" />
         <activity android:name=".WorkoutVideo" />
         <activity android:name=".Stopwatch" />
         <activity

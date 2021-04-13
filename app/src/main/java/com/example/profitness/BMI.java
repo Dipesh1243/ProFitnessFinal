@@ -76,7 +76,7 @@ public class BMI extends AppCompatActivity {
                 String hello = String.valueOf(bmi);
                 ed1.setText(hello + BMIresult);
 
-                reference2.child(firebaseUser.getUid()).setValue(hello + BMIresult);
+                reference2.child(firebaseUser.getUid()).setValue(hello + " " + BMIresult);
 
 
 

@@ -152,6 +152,8 @@ public class WeightTracker extends AppCompatActivity {
         lineDataSet.setCircleHoleColor(Color.parseColor("#03A9F4"));
         lineDataSet.setCircleRadius(3);
         lineDataSet.setDrawValues(false);
+
+
     iLineDataSets.clear();
     iLineDataSets.add(lineDataSet);
     lineData = new LineData(iLineDataSets);
@@ -159,8 +161,9 @@ public class WeightTracker extends AppCompatActivity {
     lineChart.setData(lineData);
     lineChart.invalidate();
 
-
-
-
     }
+
+
+
+
 }
