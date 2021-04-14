@@ -12,8 +12,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
@@ -31,16 +33,19 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
 public class WeightTracker extends AppCompatActivity {
 
-    EditText ed1,ed2;
+
+    EditText ed1;
+    PrefixSuffixEditText ed2;
     Button bt1;
     LineChart lineChart;
-    DatePickerDialog.OnDateSetListener setListener;
+
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -56,6 +61,8 @@ public class WeightTracker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weight_tracker);
+        getSupportActionBar().setTitle("Return to Track Progress");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ed1 = findViewById(R.id.xvalue);
         ed2 = findViewById(R.id.yvalue);
@@ -65,30 +72,6 @@ public class WeightTracker extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
-        Calendar calendar = Calendar.getInstance();
-        final int year = calendar.get(Calendar.YEAR);
-        final int month = calendar.get(Calendar.MONTH);
-        final int day = calendar.get(Calendar.DAY_OF_MONTH);
-
-//        ed1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                DatePickerDialog datePickerDialog = new DatePickerDialog(
-//                        WeightTracker.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth,
-//                        setListener,year,month,day);
-//                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//                datePickerDialog.show();
-//            }
-//        });
-//
-//        setListener = new DatePickerDialog.OnDateSetListener() {
-//            @Override
-//            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//                month = month+1;
-//                String date = day + "/" + month + "/" + year;
-//                ed1.setText(date);
-//            }
-//        };
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Chart Values");
@@ -150,9 +133,35 @@ public class WeightTracker extends AppCompatActivity {
         lineDataSet.setDrawCircles(true);
         lineDataSet.setCircleColor(Color.parseColor("#03A9F4"));
         lineDataSet.setCircleHoleColor(Color.parseColor("#03A9F4"));
-        lineDataSet.setCircleRadius(3);
+        lineDataSet.setCircleRadius(5);
         lineDataSet.setDrawValues(false);
 
+        Description description = new Description();
+        description.setEnabled(false);
+
+
+
+        XAxis xAxis = lineChart.getXAxis();
+        xAxis.setValueFormatter(new MyAxisValueFormatter());
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setDrawGridLines(true);
+        xAxis.setAxisMinimum(1);
+        xAxis.setTextSize(12);
+        xAxis.setDrawGridLines(true);
+
+        YAxis leftYAxis = lineChart.getAxisLeft();
+        leftYAxis.setValueFormatter(new MyAxisValueFormatter2());
+        leftYAxis.setAxisMinimum(0);
+        leftYAxis.setTextSize(12);
+        leftYAxis.setDrawGridLines(true);
+
+        YAxis rightYAxis = lineChart.getAxisRight();
+        rightYAxis.setEnabled(false);
+
+
+        lineChart.setHighlightPerDragEnabled(true);
+        lineChart.animateXY(1000, 1000, Easing.EaseInOutBack, Easing.EaseInBack);
+        lineChart.setDescription(description);
 
     iLineDataSets.clear();
     iLineDataSets.add(lineDataSet);
@@ -162,6 +171,24 @@ public class WeightTracker extends AppCompatActivity {
     lineChart.invalidate();
 
     }
+
+    private class MyAxisValueFormatter extends ValueFormatter implements IAxisValueFormatter{
+
+        @Override
+        public String getFormattedValue(float value) {
+            return "Day " + value;
+        }
+    }
+
+    private class MyAxisValueFormatter2 extends ValueFormatter implements IAxisValueFormatter{
+
+        @Override
+        public String getFormattedValue(float value) {
+            return value+" kg";
+        }
+    }
+
+
 
 
 

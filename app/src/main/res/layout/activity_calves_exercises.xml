@@ -6,7 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/page1"
     android:orientation="vertical"
     android:paddingHorizontal="30dp">
 
@@ -16,7 +15,7 @@
         android:layout_gravity="center"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Calves Exercises"
-        android:textColor="#E91E63"
+        android:textColor="#03A9F4"
         android:textSize="40dp"
         android:textStyle="bold" />
 

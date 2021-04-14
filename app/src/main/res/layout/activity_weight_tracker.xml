@@ -19,7 +19,7 @@
             android:layout_height="65dp"
             android:background="@drawable/login"
             android:fontFamily="sans-serif-condensed-medium"
-            android:hint="Select Date"
+            android:hint="Enter Day:"
             android:inputType="textEmailAddress"
             android:paddingVertical="15dp"
             android:paddingLeft="10dp"
@@ -32,13 +32,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp">
 
-        <EditText
+        <com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText
             android:id="@+id/yvalue"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:background="@drawable/login"
             android:fontFamily="sans-serif-condensed-medium"
-            android:hint="Weight in KG"
+            android:hint="Weight"
+            app:suffix=" kg"
             android:paddingVertical="15dp"
             android:paddingLeft="10dp"
             android:textColorHint="#03A9F4" />

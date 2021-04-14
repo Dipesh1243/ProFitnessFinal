@@ -12,17 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProFitness">
-        <activity android:name=".PieChart"></activity>
+        <activity android:name=".PieChart"
+            android:parentActivityName=".Menu"
+            >
+
+
+        </activity>
         <activity android:name=".Webview" />
         <activity android:name=".WorkoutVideo" />
-        <activity android:name=".Stopwatch" />
+        <activity android:name=".Stopwatch"
+            android:parentActivityName=".TrackProgress"
+            />
         <activity
             android:name=".BMI"
             android:parentActivityName=".TrackProgress" />
         <activity
             android:name=".FoodIngredients"
             android:parentActivityName=".Diet" />
-        <activity android:name=".WeightTracker" />
+        <activity android:name=".WeightTracker"
+            android:parentActivityName=".TrackProgress"
+            />
         <activity
             android:name=".Diet"
             android:parentActivityName=".Menu" />

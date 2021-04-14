@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class Advice extends AppCompatActivity {
 
     TextView tv1;
+    Button bt1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,15 @@ public class Advice extends AppCompatActivity {
 
 
         tv1= findViewById(R.id.contactemail);
+        bt1 = findViewById(R.id.info);
+
+        bt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Advice.this, PieChart.class);
+                startActivity(i);
+            }
+        });
 
 
         tv1.setOnClickListener(new View.OnClickListener() {

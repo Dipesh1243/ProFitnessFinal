@@ -26,6 +26,8 @@ public class PieChart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
+        getSupportActionBar().setTitle("Return to Menu");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         pieChart = findViewById(R.id.piechart);
         bt1 = findViewById(R.id.back);
@@ -47,24 +49,33 @@ public class PieChart extends AppCompatActivity {
         pieChart.setDrawHoleEnabled(true);
         pieChart.setHoleColor(Color.WHITE);
         pieChart.setTransparentCircleRadius(61f);
+        pieChart.setEntryLabelColor(Color.BLACK);
 
 
         ArrayList<PieEntry> yValues = new ArrayList<>();
 
-        yValues.add(new PieEntry(20, "Strength"));
-        yValues.add(new PieEntry(5, "High Intensity Training"));
-        yValues.add(new PieEntry(10, "Cross Training"));
-        yValues.add(new PieEntry(30, "Long, Easy Cardio"));
-        yValues.add(new PieEntry(10, "Stretching"));
-        yValues.add(new PieEntry(25, "Healthy Eating"));
+        yValues.add(new PieEntry(20f, "Strength"));
+        yValues.add(new PieEntry(10f, "High Intensity Training"));
+        yValues.add(new PieEntry(20f, "Cardio"));
+        yValues.add(new PieEntry(40f, "Healthy Eating"));
+        yValues.add(new PieEntry(10f, "Stretching"));
+
+
+
+
+        pieChart.setCenterText("How to spend your time");
+        pieChart.setCenterTextSize(24);
+
 
 
         pieChart.animateY(1000, Easing.EaseInOutCubic);
 
+
+
         PieDataSet pieDataSet = new PieDataSet(yValues, "Countries");
         pieDataSet.setSliceSpace(3f);
         pieDataSet.setSelectionShift(5f);
-        pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
+        pieDataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
 
         PieData pieData = new PieData((pieDataSet));
         pieData.setValueTextSize(10f);

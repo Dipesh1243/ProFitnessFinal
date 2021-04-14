@@ -9,7 +9,6 @@
     android:paddingHorizontal="30dp"
     >
 
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

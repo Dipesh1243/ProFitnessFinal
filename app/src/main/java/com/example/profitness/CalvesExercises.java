@@ -33,7 +33,45 @@ public class CalvesExercises extends AppCompatActivity {
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(CalvesExercises.this, Webview.class);
+                i.putExtra("my_image", "standcalf");
+                startActivity(i);
+            }
+        });
 
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CalvesExercises.this, Webview.class);
+                i.putExtra("my_image", "seatedcalf");
+                startActivity(i);
+            }
+        });
+
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CalvesExercises.this, Webview.class);
+                i.putExtra("my_image", "farm");
+                startActivity(i);
+            }
+        });
+
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CalvesExercises.this, Webview.class);
+                i.putExtra("my_image", "squat");
+                startActivity(i);
+            }
+        });
+
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CalvesExercises.this, Webview.class);
+                i.putExtra("my_image", "stiff");
+                startActivity(i);
             }
         });
     }
