@@ -294,10 +294,69 @@ public class Webview extends AppCompatActivity {
 
             }
 
+            else if (res_image.equals("q1")){
+                webView.loadUrl("https://www.wikihow.fitness/Front-Squat#:~:text=You'll%20start%20by%20setting,%2C%20reps%2C%20and%20grip%20styles.");
+
+            }
+
+            else if (res_image.equals("q2")){
+                webView.loadUrl("https://www.wikihow.com/Do-Leg-Extensions");
+            }
+            else if (res_image.equals("q3")){
+                webView.loadUrl("https://www.wikihow.com/Perform-a-Leg-Press-Safely");
+            }
+
+            else if (res_image.equals("q4")){
+                webView.loadUrl("https://www.muscleandstrength.com/exercises/dumbbell-goblet-squat");
+            }
+            else if (res_image.equals("q5")){
+                webView.loadUrl("https://www.wikihow.com/Do-a-Bulgarian-Split-Squat");
+            }
+
+            else if (res_image.equals("q6")){
+                webView.loadUrl("https://www.muscleandstrength.com/exercises/barbell-lunge.html");
+            }
+
+            else if (res_image.equals("q7")){
+                webView.loadUrl("https://www.wikihow.com/Do-a-Lateral-Step-Up");
+            }
+
+            else if (res_image.equals("q8")){
+                webView.loadUrl("https://www.wikihow.fitness/Do-a-Glute-Bridge");
+            }
+
+            else if (res_image.equals("q9")){
+                webView.loadUrl("https://www.wikihow.com/Do-a-Donkey-Kick");
+            }
+            else if (res_image.equals("q10")){
+                webView.loadUrl("https://www.wikihow.fitness/Do-a-One-Arm-Dumbbell-Row");
+            }
+
+            else if (res_image.equals("q11")){
+                webView.loadUrl("https://www.wikihow.com/Do-a-Bent-over-Row#:~:text=Grip%20a%20dumbbell%20in%20each,your%20abdomen%20and%20lower%20back.");
+            }
+
+            else if (res_image.equals("q12")){
+                webView.loadUrl("https://www.wikihow.com/Do-a-Seated-Cable-Row");
+            }
+
+            else if (res_image.equals("q13")){
+                webView.loadUrl("https://www.muscleandstrength.com/exercises/smith-machine-bodyweight-row.html");
+            }
+
+            else if (res_image.equals("q14")){
+                webView.loadUrl("https://www.wikihow.fitness/Do-a-Lat-Pulldown");
+            }
+            else if (res_image.equals("q15")){
+                webView.loadUrl("https://www.muscleandstrength.com/exercises/bent-over-row.html");
+            }
+
+            else if (res_image.equals("q16")){
+                webView.loadUrl("https://www.muscleandstrength.com/exercises/close-grip-pull-down.html");
+            }
 
 
-
-
+            
         }
 
     }

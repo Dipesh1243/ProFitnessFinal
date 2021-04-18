@@ -17,9 +17,11 @@ public class DietAdapter extends RecyclerView.Adapter<DietAdapter.DietAdapterVie
 
     public interface OnItemClickListener {
         void OnItemClick(int position);
+
     }
 
     public void setOnItemClickListener(OnItemClickListener listener){
+
         mListener = listener;
     }
 
