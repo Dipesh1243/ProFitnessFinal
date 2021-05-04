@@ -32,8 +32,6 @@ public class Diet extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
-
         recyclerview1();
 
         recyclerview3();
@@ -86,6 +84,7 @@ public class Diet extends AppCompatActivity {
                     i.putExtra("my_image", R.drawable.food1);
                     startActivity(i);
                 }
+
                 if (fooditems1.getMtext1().contains("Pasta and Chicken")) {
 
                     Intent i = new Intent(Diet.this, FoodIngredients.class);

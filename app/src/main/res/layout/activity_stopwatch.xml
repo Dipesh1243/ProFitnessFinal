@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,12 +30,12 @@
             android:id="@+id/chronometer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="100dp"
-            android:background="@drawable/login"
             android:layout_below="@+id/stopwatchtitle"
             android:layout_centerInParent="true"
             android:layout_marginTop="200dp"
-            android:padding="30dp"/>
+            android:background="@drawable/login"
+            android:padding="30dp"
+            android:textSize="100dp" />
 
 
     </RelativeLayout>
@@ -44,61 +43,56 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        >
+        android:orientation="horizontal">
 
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#03A9F4"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:onClick="startChronometer"
+            android:text="Start"
+            android:textAllCaps="false" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startChronometer"
-        android:text="Start"
-        android:backgroundTint="#03A9F4"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textAllCaps="false"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#03A9F4"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:onClick="pauseChronometer"
+            android:text="Pause"
+            android:textAllCaps="false" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="pauseChronometer"
-        android:text="Pause"
-        android:backgroundTint="#03A9F4"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textAllCaps="false"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="resetChronometer"
-        android:text="Reset"
-        android:backgroundTint="#03A9F4"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textAllCaps="false"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#03A9F4"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:onClick="resetChronometer"
+            android:text="Reset"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/backbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:backgroundTint="#03A9F4"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Return"
-            android:textAllCaps="false"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            />
+            android:textAllCaps="false" />
 
     </LinearLayout>
-
 
 
 </LinearLayout>

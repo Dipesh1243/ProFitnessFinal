@@ -9,7 +9,7 @@ import android.view.View;
 
 public class HamstringExercises extends AppCompatActivity {
 
-    CardView cd1, cd2,cd3,cd4,cd5,cd6,cd7;
+    CardView cd1, cd2, cd3, cd4, cd5, cd6, cd7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,13 @@ public class HamstringExercises extends AppCompatActivity {
         getSupportActionBar().setTitle("View More Exercises");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        cd1 =findViewById(R.id.cd1);
-        cd2 =findViewById(R.id.cd2);
-        cd3 =findViewById(R.id.cd3);
-        cd4 =findViewById(R.id.cd4);
-        cd5 =findViewById(R.id.cd5);
-        cd6 =findViewById(R.id.cd6);
-        cd7 =findViewById(R.id.cd7);
+        cd1 = findViewById(R.id.cd1);
+        cd2 = findViewById(R.id.cd2);
+        cd3 = findViewById(R.id.cd3);
+        cd4 = findViewById(R.id.cd4);
+        cd5 = findViewById(R.id.cd5);
+        cd6 = findViewById(R.id.cd6);
+        cd7 = findViewById(R.id.cd7);
 
         cd1.setOnClickListener(new View.OnClickListener() {
             @Override

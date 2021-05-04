@@ -2,13 +2,13 @@ package com.example.profitness;
 
 public class User {
 
-    private String name,age,height,weight;
+    private String name, age, height, weight;
 
-    public User(){
+    public User() {
 
     }
 
-    public User(String name, String age, String height, String weight){
+    public User(String name, String age, String height, String weight) {
 
         this.name = name;
         this.age = age;
@@ -18,20 +18,19 @@ public class User {
     }
 
 
-
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getAge(){
+    public String getAge() {
         return age;
     }
 
-    public String getHeight(){
+    public String getHeight() {
         return height;
     }
 
-    public String getWeight(){
+    public String getWeight() {
         return weight;
     }
 

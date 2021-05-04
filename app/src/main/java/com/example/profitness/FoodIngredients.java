@@ -22,7 +22,7 @@ public class FoodIngredients extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.foodingredient);
 
         Bundle bundle = getIntent().getExtras();
-        if (bundle != null){
+        if (bundle != null) {
             int res_image = bundle.getInt("my_image");
             imageView.setImageResource(res_image);
 

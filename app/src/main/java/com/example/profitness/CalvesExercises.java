@@ -15,7 +15,7 @@ import java.net.URI;
 
 public class CalvesExercises extends AppCompatActivity {
 
-    CardView card1,card2,card3,card4,card5;
+    CardView card1, card2, card3, card4, card5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

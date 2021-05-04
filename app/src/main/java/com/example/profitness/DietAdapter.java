@@ -20,12 +20,12 @@ public class DietAdapter extends RecyclerView.Adapter<DietAdapter.DietAdapterVie
 
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener){
+    public void setOnItemClickListener(OnItemClickListener listener) {
 
         mListener = listener;
     }
 
-    public static class DietAdapterViewHolder extends RecyclerView.ViewHolder{
+    public static class DietAdapterViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView mImageView;
         public TextView mTextView1;
@@ -39,9 +39,9 @@ public class DietAdapter extends RecyclerView.Adapter<DietAdapter.DietAdapterVie
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (listener != null){
+                    if (listener != null) {
                         int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION){
+                        if (position != RecyclerView.NO_POSITION) {
                             listener.OnItemClick(position);
                         }
                     }
@@ -51,7 +51,7 @@ public class DietAdapter extends RecyclerView.Adapter<DietAdapter.DietAdapterVie
         }
     }
 
-    public  DietAdapter(ArrayList<GainMuscleItems> GAINList){
+    public DietAdapter(ArrayList<GainMuscleItems> GAINList) {
         mMuscleList = GAINList;
     }
 

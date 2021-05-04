@@ -109,7 +109,6 @@ public class TrackProgress extends AppCompatActivity {
                                 Intent i = new Intent(TrackProgress.this, MaintainWeight.class);
                                 startActivity(i);
                             }
-
                             if (listpos.contains("The Kettlebell Conditioner")) {
                                 Intent i = new Intent(TrackProgress.this, HIT.class);
                                 startActivity(i);
@@ -118,12 +117,10 @@ public class TrackProgress extends AppCompatActivity {
                                 Intent i = new Intent(TrackProgress.this, HIT.class);
                                 startActivity(i);
                             }
-
                             if (listpos.contains("The Home Fat Burner")) {
                                 Intent i = new Intent(TrackProgress.this, HIT.class);
                                 startActivity(i);
                             }
-
                             if (listpos.contains("The Punisher")) {
                                 Intent i = new Intent(TrackProgress.this, HIT.class);
                                 startActivity(i);

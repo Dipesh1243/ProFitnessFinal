@@ -20,11 +20,11 @@ public class StretchesAdapter extends RecyclerView.Adapter<StretchesAdapter.Stre
         void OnItemClick(int position);
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener){
+    public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
 
-    public static class StretchesViewHolder extends RecyclerView.ViewHolder{
+    public static class StretchesViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView mImageView;
         public TextView mTextView1;
@@ -39,9 +39,9 @@ public class StretchesAdapter extends RecyclerView.Adapter<StretchesAdapter.Stre
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (listener != null){
+                    if (listener != null) {
                         int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION){
+                        if (position != RecyclerView.NO_POSITION) {
                             listener.OnItemClick(position);
                         }
                     }
@@ -50,7 +50,7 @@ public class StretchesAdapter extends RecyclerView.Adapter<StretchesAdapter.Stre
         }
     }
 
-    public  StretchesAdapter(ArrayList<StretchesItems> stretchesList){
+    public StretchesAdapter(ArrayList<StretchesItems> stretchesList) {
         mStretchesList = stretchesList;
     }
 

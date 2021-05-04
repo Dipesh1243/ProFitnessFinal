@@ -19,11 +19,11 @@ public class ResistanceBandsAdapter extends RecyclerView.Adapter<ResistanceBands
         void OnItemClick(int position);
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener){
+    public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
 
-    public static class ResistanceBandsViewHolder extends RecyclerView.ViewHolder{
+    public static class ResistanceBandsViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView mImageView;
         public TextView mTextView1;
@@ -38,9 +38,9 @@ public class ResistanceBandsAdapter extends RecyclerView.Adapter<ResistanceBands
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (listener != null){
+                    if (listener != null) {
                         int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION){
+                        if (position != RecyclerView.NO_POSITION) {
                             listener.OnItemClick(position);
                         }
                     }
@@ -49,7 +49,7 @@ public class ResistanceBandsAdapter extends RecyclerView.Adapter<ResistanceBands
         }
     }
 
-    public  ResistanceBandsAdapter(ArrayList<ResistanceBandsItems> rbList){
+    public ResistanceBandsAdapter(ArrayList<ResistanceBandsItems> rbList) {
         mRBlist = rbList;
     }
 

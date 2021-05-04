@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class MaintainWeight extends AppCompatActivity {
 
-    Button bt1,bt2;
+    Button bt1, bt2;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -71,7 +71,7 @@ public class MaintainWeight extends AppCompatActivity {
                 reference.child(firebaseUser.getUid()).child("Maintain Weight").setValue(true);
                 Intent i = new Intent(MaintainWeight.this, Menu.class);
                 startActivity(i);
-                Toast.makeText(MaintainWeight.this,"You have completed this workout",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MaintainWeight.this, "You have completed this workout", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -79,9 +79,9 @@ public class MaintainWeight extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for (DataSnapshot ds : snapshot.getChildren()){
+                for (DataSnapshot ds : snapshot.getChildren()) {
 
-                    if (ds.getKey().equals("Maintain Weight")){
+                    if (ds.getKey().equals("Maintain Weight")) {
                         bt1.setText("Completed");
                         bt1.setBackgroundColor(Color.parseColor("#4CAF50"));
                     }

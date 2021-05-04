@@ -31,7 +31,7 @@ public class WorkoutVideo extends AppCompatActivity {
         });
 
         Bundle bundle = getIntent().getExtras();
-        if (bundle != null){
+        if (bundle != null) {
             int video = bundle.getInt("my_image");
             String videoPath = "android.resource://" + getPackageName() + "/" + video;
 

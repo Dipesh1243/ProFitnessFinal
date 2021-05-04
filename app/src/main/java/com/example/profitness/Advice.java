@@ -23,7 +23,7 @@ public class Advice extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        tv1= findViewById(R.id.contactemail);
+        tv1 = findViewById(R.id.contactemail);
         bt1 = findViewById(R.id.info);
 
         bt1.setOnClickListener(new View.OnClickListener() {

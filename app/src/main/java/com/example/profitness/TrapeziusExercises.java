@@ -9,7 +9,7 @@ import android.view.View;
 
 public class TrapeziusExercises extends AppCompatActivity {
 
-    CardView cd1,cd2,cd3,cd4,cd5;
+    CardView cd1, cd2, cd3, cd4, cd5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +66,6 @@ public class TrapeziusExercises extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
 
 
     }

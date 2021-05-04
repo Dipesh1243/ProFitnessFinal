@@ -50,6 +50,6 @@ public class HiitDialog4 extends AppCompatDialogFragment {
                 });
 
 
-        return  builder.create();
+        return builder.create();
     }
 }

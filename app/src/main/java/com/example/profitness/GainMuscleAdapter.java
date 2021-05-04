@@ -19,11 +19,11 @@ public class GainMuscleAdapter extends RecyclerView.Adapter<GainMuscleAdapter.Ga
         void OnItemClick(int position);
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener){
+    public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
 
-    public static class GainMuscleViewHolder extends RecyclerView.ViewHolder{
+    public static class GainMuscleViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView mImageView;
         public TextView mTextView1;
@@ -38,9 +38,9 @@ public class GainMuscleAdapter extends RecyclerView.Adapter<GainMuscleAdapter.Ga
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (listener != null){
+                    if (listener != null) {
                         int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION){
+                        if (position != RecyclerView.NO_POSITION) {
                             listener.OnItemClick(position);
                         }
                     }
@@ -49,7 +49,7 @@ public class GainMuscleAdapter extends RecyclerView.Adapter<GainMuscleAdapter.Ga
         }
     }
 
-    public  GainMuscleAdapter(ArrayList<GainMuscleItems> GAINList){
+    public GainMuscleAdapter(ArrayList<GainMuscleItems> GAINList) {
         mMuscleList = GAINList;
     }
 

@@ -31,43 +31,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/dashboard"
-                android:rowCount="5"
                 android:columnCount="1"
-                >
+                android:rowCount="5">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/hit1"
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="0"
-                    android:background="@drawable/login"
-                    android:layout_column="0"
-                    android:layout_gravity="fill"
                     android:layout_rowWeight="1"
+                    android:layout_column="0"
                     android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:background="@drawable/login"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
-                    >
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center_vertical|center_horizontal"
-                        >
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/kettlebell"/>
+                            android:src="@drawable/kettlebell" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:text="The Kettlebell Conditioner"
-                            android:textAlignment="center"
-                            android:gravity="center_horizontal" />
+                            android:textAlignment="center" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -76,33 +74,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="1"
-                    android:layout_column="0"
-                    android:layout_gravity="fill"
                     android:layout_rowWeight="1"
+                    android:layout_column="0"
                     android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
-                    >
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center_vertical|center_horizontal"
-                        >
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="10dp"
                             android:layout_height="10dp"
-                            android:src="@drawable/app"/>
+                            android:src="@drawable/app" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:text="home"
-                            android:textAlignment="center"
-                            android:gravity="center_horizontal" />
+                            android:textAlignment="center" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -112,33 +109,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="1"
-                    android:layout_column="0"
-                    android:layout_gravity="fill"
                     android:layout_rowWeight="1"
+                    android:layout_column="0"
                     android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
-                    >
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center_vertical|center_horizontal"
-                        >
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/jogging"/>
+                            android:src="@drawable/jogging" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:text="The Outdoor Sprinter"
-                            android:textAlignment="center"
-                            android:gravity="center_horizontal" />
+                            android:textAlignment="center" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -147,33 +143,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="2"
-                    android:layout_column="0"
-                    android:layout_gravity="fill"
                     android:layout_rowWeight="1"
+                    android:layout_column="0"
                     android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
-                    >
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center_vertical|center_horizontal"
-                        >
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="75dp"
-                            android:src="@drawable/progress"/>
+                            android:src="@drawable/progress" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:text="Track Progress"
-                            android:textAlignment="center"
-                            android:gravity="center_horizontal" />
+                            android:textAlignment="center" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -183,33 +178,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="3"
-                    android:layout_column="0"
-                    android:layout_gravity="fill"
                     android:layout_rowWeight="1"
+                    android:layout_column="0"
                     android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
-                    >
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center_vertical|center_horizontal"
-                        >
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="75dp"
-                            android:src="@drawable/burpee"/>
+                            android:src="@drawable/burpee" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:text="The Punisher"
-                            android:textAlignment="center"
-                            android:gravity="center_horizontal" />
+                            android:textAlignment="center" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -219,33 +213,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="4"
-                    android:layout_column="0"
-                    android:layout_gravity="fill"
                     android:layout_rowWeight="1"
+                    android:layout_column="0"
                     android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
-                    >
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center_vertical|center_horizontal"
-                        >
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="75dp"
-                            android:src="@drawable/treadmill"/>
+                            android:src="@drawable/treadmill" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:text="Gym HIIT Workout"
-                            android:textAlignment="center"
-                            android:gravity="center_horizontal" />
+                            android:textAlignment="center" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -255,33 +248,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="2"
-                    android:layout_column="0"
-                    android:layout_gravity="fill"
                     android:layout_rowWeight="1"
+                    android:layout_column="0"
                     android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
-                    >
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center_vertical|center_horizontal"
-                        >
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="75dp"
-                            android:src="@drawable/pushup"/>
+                            android:src="@drawable/pushup" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:text="Home Fat Burner"
-                            android:textAlignment="center"
-                            android:gravity="center_horizontal" />
+                            android:textAlignment="center" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

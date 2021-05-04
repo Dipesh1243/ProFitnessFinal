@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class HIT extends AppCompatActivity {
-    public CardView cdhit1,cdhit2,cdhit3,cdhit4,cdhit5;
+    public CardView cdhit1, cdhit2, cdhit3, cdhit4, cdhit5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,31 +60,31 @@ public class HIT extends AppCompatActivity {
 
     }
 
-    public void openDialog1(){
+    public void openDialog1() {
         HiitDialog1 hiitDialog1 = new HiitDialog1();
         hiitDialog1.show(getSupportFragmentManager(), "hiitdialog 1");
 
     }
 
-    public void openDialog2(){
+    public void openDialog2() {
         HiitDialog2 hiitDialog2 = new HiitDialog2();
         hiitDialog2.show(getSupportFragmentManager(), "hiitdialog 2");
 
     }
 
-    public void openDialog3(){
+    public void openDialog3() {
         HiitDialog3 hiitDialog3 = new HiitDialog3();
         hiitDialog3.show(getSupportFragmentManager(), "hiitdialog 3");
 
     }
 
-    public void openDialog4(){
+    public void openDialog4() {
         HiitDialog4 hiitDialog4 = new HiitDialog4();
         hiitDialog4.show(getSupportFragmentManager(), "hiitdialog 4");
 
     }
 
-    public void openDialog5(){
+    public void openDialog5() {
         HiitDialog5 hiitDialog5 = new HiitDialog5();
         hiitDialog5.show(getSupportFragmentManager(), "hiitdialog 5");
 

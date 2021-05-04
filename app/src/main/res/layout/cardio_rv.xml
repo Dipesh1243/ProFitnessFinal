@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="4dp">
 
     <RelativeLayout
@@ -15,31 +15,31 @@
             android:id="@+id/test"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:padding="2dp"/>
+            android:padding="2dp" />
 
         <TextView
             android:id="@+id/test1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/test"
             android:text="hello"
             android:textColor="@color/black"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/test" />
+            android:textSize="40dp" />
 
         <TextView
             android:id="@+id/test3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/test1"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@id/test"
+            android:layout_toRightOf="@id/test"
             android:text="hello 2"
             android:textColor="#03A9F4"
             android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_below="@id/test1"
-            android:layout_toEndOf="@id/test"
-            android:layout_toRightOf="@id/test"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp" />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

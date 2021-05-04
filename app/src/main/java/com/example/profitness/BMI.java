@@ -64,7 +64,7 @@ public class BMI extends AppCompatActivity {
 
 
                 if (bmi < 16){
-                    BMIresult = "severly under weight";
+                    BMIresult = "severely under weight";
                 } else if (bmi < 18.5){
                     BMIresult = "under weight";
                 }else if (bmi > 18.5 && bmi <= 24.9){
@@ -74,12 +74,11 @@ public class BMI extends AppCompatActivity {
                 }
 
                 String hello = String.valueOf(bmi);
+
+
                 ed1.setText(hello + BMIresult);
 
                 reference2.child(firebaseUser.getUid()).setValue(hello + " " + BMIresult);
-
-
-
 
             }
         });

@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/title"
@@ -25,13 +24,11 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:layout_below="@+id/title"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
         android:layout_marginBottom="30dp"
-        android:scrollbars="vertical"
-        />
-
+        android:scrollbars="vertical" />
 
 
     <Button
@@ -39,9 +36,9 @@
         android:layout_width="280dp"
         android:layout_height="60dp"
         android:layout_below="@id/maintainweightrecyclerView"
-        android:layout_toRightOf="@+id/returnback"
-        android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/returnback"
         android:backgroundTint="@drawable/completebutton"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Complete"
@@ -52,9 +49,9 @@
         android:layout_width="280dp"
         android:layout_height="60dp"
         android:layout_below="@+id/maintainweightrecyclerView"
-        android:backgroundTint="#03A9F4"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:backgroundTint="#03A9F4"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Return"
         android:textAllCaps="false" />

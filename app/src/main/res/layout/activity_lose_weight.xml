@@ -56,7 +56,7 @@
         android:layout_marginLeft="10dp"
         android:backgroundTint="@drawable/completebutton"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Completed"
+        android:text="Complete"
         android:textAllCaps="false" />
 
 </RelativeLayout>

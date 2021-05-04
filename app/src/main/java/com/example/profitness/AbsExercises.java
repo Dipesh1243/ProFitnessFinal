@@ -9,7 +9,7 @@ import android.view.View;
 
 public class AbsExercises extends AppCompatActivity {
 
-    CardView cd1,cd2,cd3,cd4,cd5,cd6,cd7,cd8,cd9,cd10,cd11,cd12,cd13,cd14,cd15,cd16;
+    CardView cd1, cd2, cd3, cd4, cd5, cd6, cd7, cd8, cd9, cd10, cd11, cd12, cd13, cd14, cd15, cd16;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

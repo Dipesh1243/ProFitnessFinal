@@ -35,7 +35,7 @@ public class PieChart extends AppCompatActivity {
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PieChart.this, Menu.class);
+                Intent i = new Intent(PieChart.this, Advice.class);
                 startActivity(i);
             }
         });

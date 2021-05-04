@@ -18,25 +18,23 @@ public class TrackProgressAdapter extends RecyclerView.Adapter<TrackProgressAdap
 
     public interface OnItemClickListener {
         void OnItemClick(int position);
+
         void OnDeleteClick(int position);
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener){
+    public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
 
 
-
-
-
-    public static class TrackProgressViewHolder extends RecyclerView.ViewHolder{
+    public static class TrackProgressViewHolder extends RecyclerView.ViewHolder {
 
 
         public TextView mTextView1;
         public ImageView imageView;
 
 
-        public TrackProgressViewHolder(@NonNull View itemView,OnItemClickListener listener ) {
+        public TrackProgressViewHolder(@NonNull View itemView, OnItemClickListener listener) {
             super(itemView);
 
             mTextView1 = itemView.findViewById(R.id.test1);
@@ -45,9 +43,9 @@ public class TrackProgressAdapter extends RecyclerView.Adapter<TrackProgressAdap
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (listener != null){
+                    if (listener != null) {
                         int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION){
+                        if (position != RecyclerView.NO_POSITION) {
                             listener.OnItemClick(position);
                         }
                     }
@@ -69,7 +67,7 @@ public class TrackProgressAdapter extends RecyclerView.Adapter<TrackProgressAdap
         }
     }
 
-    public  TrackProgressAdapter(ArrayList<String> GAINList){
+    public TrackProgressAdapter(ArrayList<String> GAINList) {
 
         mMuscleList = GAINList;
     }

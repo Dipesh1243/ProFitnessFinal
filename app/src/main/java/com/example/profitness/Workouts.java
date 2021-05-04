@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class Workouts extends AppCompatActivity {
 
-    TextView w1,w2,w3;
+    TextView w1, w2, w3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,8 @@ public class Workouts extends AppCompatActivity {
         w1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent i1 = new Intent(Workouts.this, GainMuscle.class);
-            startActivity(i1);
+                Intent i1 = new Intent(Workouts.this, GainMuscle.class);
+                startActivity(i1);
             }
         });
 

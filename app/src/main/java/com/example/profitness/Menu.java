@@ -32,6 +32,14 @@ public class Menu extends AppCompatActivity {
         card5 = findViewById(R.id.cd5);
         card6 = findViewById(R.id.cd3);
 
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intTodiet = new Intent(Menu.this, Diet.class);
+                startActivity(intTodiet);
+            }
+        });
+
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,13 +80,7 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        card6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intTodiet = new Intent(Menu.this, Diet.class);
-                startActivity(intTodiet);
-            }
-        });
+
 
     }
 
@@ -97,9 +99,6 @@ public class Menu extends AppCompatActivity {
                 Intent intToMain = new Intent(Menu.this, MainActivity.class);
                 startActivity(intToMain);
 
-            case R.id.menupie:
-                Intent i1 = new Intent(Menu.this, PieChart.class);
-                startActivity(i1);
         }
         return super.onOptionsItemSelected(item);
     }

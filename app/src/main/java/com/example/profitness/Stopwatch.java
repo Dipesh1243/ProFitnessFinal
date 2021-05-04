@@ -42,7 +42,6 @@ public class Stopwatch extends AppCompatActivity {
             public void onChronometerTick(Chronometer chronometer) {
                 if ((SystemClock.elapsedRealtime() - chronometer.getBase()) >= 10000) {
                     chronometer.setBase(SystemClock.elapsedRealtime());
-                    Toast.makeText(Stopwatch.this, "Bing!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -54,6 +53,7 @@ public class Stopwatch extends AppCompatActivity {
             running = true;
         }
     }
+
     public void pauseChronometer(View v) {
         if (running) {
             chronometer.stop();
@@ -61,6 +61,7 @@ public class Stopwatch extends AppCompatActivity {
             running = false;
         }
     }
+    
     public void resetChronometer(View v) {
         chronometer.setBase(SystemClock.elapsedRealtime());
         pauseOffset = 0;

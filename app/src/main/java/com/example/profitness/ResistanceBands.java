@@ -48,7 +48,7 @@ public class ResistanceBands extends AppCompatActivity {
 
     }
 
-    public void CreateRB(){
+    public void CreateRB() {
         rbList = new ArrayList<>();
         rbList.add(new ResistanceBandsItems(R.drawable.lateralrb, "Banded Lateral Step-out Squat", "Legs, Lower Back, Quads, Hamstrings"));
         rbList.add(new ResistanceBandsItems(R.drawable.frontsquatrb, "Banded Front Squat", "Legs, Quads, Hamstrings"));
@@ -61,7 +61,8 @@ public class ResistanceBands extends AppCompatActivity {
         rbList.add(new ResistanceBandsItems(R.drawable.midbackrb, "Mid-Back Row", "Lower Back, Biceps"));
         rbList.add(new ResistanceBandsItems(R.drawable.frontshouldersrb, "Front Shoulders", "Shoulders"));
     }
-    public void BuildRecyclerViewStretch(){
+
+    public void BuildRecyclerViewStretch() {
         mRecyclerView = findViewById(R.id.rbrecyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
@@ -138,10 +139,10 @@ public class ResistanceBands extends AppCompatActivity {
         });
     }
 
-    private void filter(String text){
+    private void filter(String text) {
         ArrayList<ResistanceBandsItems> filteredList = new ArrayList<>();
-        for (ResistanceBandsItems item : rbList){
-            if (item.getMtext1().toLowerCase().contains(text.toLowerCase()) | item.getMtext2().toLowerCase().contains(text.toLowerCase())){
+        for (ResistanceBandsItems item : rbList) {
+            if (item.getMtext1().toLowerCase().contains(text.toLowerCase()) | item.getMtext2().toLowerCase().contains(text.toLowerCase())) {
                 filteredList.add(item);
             }
         }

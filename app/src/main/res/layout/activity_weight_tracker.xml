@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="30dp"
-    >
+    android:paddingHorizontal="30dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -39,10 +38,10 @@
             android:background="@drawable/login"
             android:fontFamily="sans-serif-condensed-medium"
             android:hint="Weight"
-            app:suffix=" kg"
             android:paddingVertical="15dp"
             android:paddingLeft="10dp"
-            android:textColorHint="#03A9F4" />
+            android:textColorHint="#03A9F4"
+            app:suffix=" kg" />
 
     </RelativeLayout>
 
@@ -65,13 +64,12 @@
         android:orientation="horizontal">
 
 
-
     </LinearLayout>
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/linechart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp" />
 
 </LinearLayout>

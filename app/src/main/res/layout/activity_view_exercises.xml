@@ -14,11 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="sans-serif-smallcaps"
+        android:paddingTop="10dp"
         android:text="View a range of exercises "
         android:textColor="#2196F3"
         android:textSize="40dp"
-        android:textStyle="bold"
-        android:paddingTop="10dp"/>
+        android:textStyle="bold" />
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -166,10 +166,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Chest"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Chest"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -193,10 +193,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Abdominal"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Abdominal"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -220,10 +220,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Biceps"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Biceps"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -247,10 +247,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Triceps"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Triceps"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -274,10 +274,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Shoulders"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Shoulders"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -301,10 +301,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Hamstrings"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Hamstrings"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -322,25 +322,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp">
 
-            <TextView
-                android:id="@+id/exercise12"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@drawable/login"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="Quadriceps"
-                android:textSize="30dp"
-                android:gravity="center"
-                android:textColor="#2196F3" />
+                <TextView
+                    android:id="@+id/exercise12"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/login"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:text="Quadriceps"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="85dp"
-                android:layout_marginBottom="22dp"
-                android:background="@drawable/quadricep" />
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/quadricep" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -354,10 +354,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Glutes"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Glutes"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -380,10 +380,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Back"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Back"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -431,10 +431,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Calves"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Calves"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -457,10 +457,10 @@
                     android:layout_height="150dp"
                     android:background="@drawable/login"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Trapezius"
-                    android:textSize="30dp"
                     android:gravity="center"
-                    android:textColor="#2196F3" />
+                    android:text="Trapezius"
+                    android:textColor="#2196F3"
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="100dp"

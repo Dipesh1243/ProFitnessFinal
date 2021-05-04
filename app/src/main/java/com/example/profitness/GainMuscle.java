@@ -30,16 +30,12 @@ import java.util.ArrayList;
 
 public class GainMuscle extends AppCompatActivity {
 
-    Button bt1,bt2;
+    Button bt1, bt2;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
-
-
-
-
 
 
     private static final String WORKOUT = "Workout";
@@ -76,14 +72,13 @@ public class GainMuscle extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
 
-
         reference.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for (DataSnapshot ds : snapshot.getChildren()){
+                for (DataSnapshot ds : snapshot.getChildren()) {
 
-                    if (ds.getKey().equals("Gain Muscle")){
+                    if (ds.getKey().equals("Gain Muscle")) {
                         bt1.setText("Completed");
                         bt1.setBackgroundColor(Color.parseColor("#4CAF50"));
                     }
@@ -106,12 +101,11 @@ public class GainMuscle extends AppCompatActivity {
 
                 reference.child(firebaseUser.getUid()).child("Gain Muscle").setValue(true);
 
-                Toast.makeText(GainMuscle.this,"You have completed this workout",Toast.LENGTH_SHORT).show();
-                 Intent i = new Intent(GainMuscle.this, Menu.class);
-                 startActivity(i);
+                Toast.makeText(GainMuscle.this, "You have completed this workout", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(GainMuscle.this, Menu.class);
+                startActivity(i);
             }
         });
-
 
 
         bt2.setOnClickListener(new View.OnClickListener() {

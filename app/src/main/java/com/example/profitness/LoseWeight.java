@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class LoseWeight extends AppCompatActivity {
 
-    Button bt1,bt2;
+    Button bt1, bt2;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -72,7 +72,7 @@ public class LoseWeight extends AppCompatActivity {
 
                 Intent i = new Intent(LoseWeight.this, Menu.class);
                 startActivity(i);
-                Toast.makeText(LoseWeight.this,"You have completed this workout",Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoseWeight.this, "You have completed this workout", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -80,9 +80,9 @@ public class LoseWeight extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for (DataSnapshot ds : snapshot.getChildren()){
+                for (DataSnapshot ds : snapshot.getChildren()) {
 
-                    if (ds.getKey().equals("Lose Weight")){
+                    if (ds.getKey().equals("Lose Weight")) {
                         bt1.setText("Completed");
                         bt1.setBackgroundColor(Color.parseColor("#4CAF50"));
                     }

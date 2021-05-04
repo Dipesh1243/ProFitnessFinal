@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="30dp"
-    >
+    android:paddingHorizontal="30dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,11 +30,10 @@
         <ImageView
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:background="@drawable/app"
             android:layout_below="@+id/profiletitle"
             android:layout_centerInParent="true"
             android:layout_marginTop="20dp"
-            />
+            android:background="@drawable/app" />
 
 
     </RelativeLayout>
@@ -50,20 +47,20 @@
             android:id="@+id/fullnameprofile"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:hint="Fullname"
-            android:textSize="20dp"
-            android:textColor="#03A9F4"
             android:background="@drawable/login"
             android:fontFamily="sans-serif-condensed-medium"
-            android:paddingLeft="10dp"/>
+            android:hint="Fullname"
+            android:paddingLeft="10dp"
+            android:textColor="#03A9F4"
+            android:textSize="20dp" />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/profile"
             android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/profile" />
 
     </RelativeLayout>
 
@@ -76,20 +73,20 @@
             android:id="@+id/ageprofile"
             android:layout_width="match_parent"
             android:layout_height="65dp"
+            android:background="@drawable/login"
+            android:fontFamily="sans-serif-condensed-medium"
             android:hint="Age "
             android:paddingLeft="10dp"
-            android:textSize="20dp"
             android:textColor="#03A9F4"
-            android:background="@drawable/login"
-            android:fontFamily="sans-serif-condensed-medium"/>
+            android:textSize="20dp" />
 
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/age"
             android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/age" />
 
     </RelativeLayout>
 
@@ -102,21 +99,21 @@
             android:id="@+id/heightprofile"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:paddingLeft="10dp"
-            android:hint="Height"
-            android:textSize="20dp"
-            android:textColor="#03A9F4"
-            app:suffix=" cm"
             android:background="@drawable/login"
-            android:fontFamily="sans-serif-condensed-medium"/>
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Height"
+            android:paddingLeft="10dp"
+            android:textColor="#03A9F4"
+            android:textSize="20dp"
+            app:suffix=" cm" />
 
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/height"
             android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/height" />
 
     </RelativeLayout>
 
@@ -129,23 +126,22 @@
             android:id="@+id/weightprofile"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:paddingLeft="10dp"
-            android:hint="Weight"
-            android:textSize="20dp"
-            android:textColor="#03A9F4"
-            app:suffix=" kg"
             android:background="@drawable/login"
-            android:fontFamily="sans-serif-condensed-medium"/>
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Weight"
+            android:paddingLeft="10dp"
+            android:textColor="#03A9F4"
+            android:textSize="20dp"
+            app:suffix=" kg" />
 
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/weight"
             android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_centerInParent="true"/>
-
+            android:background="@drawable/weight" />
 
 
     </RelativeLayout>

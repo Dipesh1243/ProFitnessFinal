@@ -135,11 +135,8 @@ public class WeightTracker extends AppCompatActivity {
         lineDataSet.setCircleHoleColor(Color.parseColor("#03A9F4"));
         lineDataSet.setCircleRadius(5);
         lineDataSet.setDrawValues(false);
-
         Description description = new Description();
         description.setEnabled(false);
-
-
 
         XAxis xAxis = lineChart.getXAxis();
         xAxis.setValueFormatter(new MyAxisValueFormatter());
@@ -147,18 +144,15 @@ public class WeightTracker extends AppCompatActivity {
         xAxis.setDrawGridLines(true);
         xAxis.setAxisMinimum(1);
         xAxis.setTextSize(12);
-        xAxis.setDrawGridLines(true);
+//        xAxis.setDrawGridLines(true);
 
         YAxis leftYAxis = lineChart.getAxisLeft();
         leftYAxis.setValueFormatter(new MyAxisValueFormatter2());
         leftYAxis.setAxisMinimum(0);
         leftYAxis.setTextSize(12);
         leftYAxis.setDrawGridLines(true);
-
         YAxis rightYAxis = lineChart.getAxisRight();
         rightYAxis.setEnabled(false);
-
-
         lineChart.setHighlightPerDragEnabled(true);
         lineChart.animateXY(1000, 1000, Easing.EaseInOutBack, Easing.EaseInBack);
         lineChart.setDescription(description);

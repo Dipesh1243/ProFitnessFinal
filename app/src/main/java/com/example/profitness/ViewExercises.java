@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ViewExercises extends AppCompatActivity {
 
-    TextView exc1,exc2,exc3,exc4,exc5,exc6,exc7,exc8,exc9,exc10,exc11,exc12,exc13,exc14,exc15,exc16;
+    TextView exc1, exc2, exc3, exc4, exc5, exc6, exc7, exc8, exc9, exc10, exc11, exc12, exc13, exc14, exc15, exc16;
 
 
     @Override
@@ -44,7 +44,7 @@ public class ViewExercises extends AppCompatActivity {
         exc1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e1 = new Intent(ViewExercises.this,Cardio.class);
+                Intent e1 = new Intent(ViewExercises.this, Cardio.class);
                 startActivity(e1);
             }
         });
@@ -52,7 +52,7 @@ public class ViewExercises extends AppCompatActivity {
         exc2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e2 = new Intent(ViewExercises.this,Stretches.class);
+                Intent e2 = new Intent(ViewExercises.this, Stretches.class);
                 startActivity(e2);
             }
         });
@@ -60,7 +60,7 @@ public class ViewExercises extends AppCompatActivity {
         exc3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e3 = new Intent(ViewExercises.this,ResistanceBands.class);
+                Intent e3 = new Intent(ViewExercises.this, ResistanceBands.class);
                 startActivity(e3);
             }
         });
@@ -68,7 +68,7 @@ public class ViewExercises extends AppCompatActivity {
         exc4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e4 = new Intent(ViewExercises.this,BodyWeight.class);
+                Intent e4 = new Intent(ViewExercises.this, BodyWeight.class);
                 startActivity(e4);
             }
         });
@@ -76,7 +76,7 @@ public class ViewExercises extends AppCompatActivity {
         exc5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e5 = new Intent(ViewExercises.this,HIT.class);
+                Intent e5 = new Intent(ViewExercises.this, HIT.class);
                 startActivity(e5);
             }
         });
@@ -84,7 +84,7 @@ public class ViewExercises extends AppCompatActivity {
         exc6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e6 = new Intent(ViewExercises.this,ChestExercises.class);
+                Intent e6 = new Intent(ViewExercises.this, ChestExercises.class);
                 startActivity(e6);
             }
         });
@@ -92,7 +92,7 @@ public class ViewExercises extends AppCompatActivity {
         exc7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e7 = new Intent(ViewExercises.this,AbsExercises.class);
+                Intent e7 = new Intent(ViewExercises.this, AbsExercises.class);
                 startActivity(e7);
             }
         });
@@ -100,7 +100,7 @@ public class ViewExercises extends AppCompatActivity {
         exc8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e8 = new Intent(ViewExercises.this,BicepExercises.class);
+                Intent e8 = new Intent(ViewExercises.this, BicepExercises.class);
                 startActivity(e8);
             }
         });
@@ -108,7 +108,7 @@ public class ViewExercises extends AppCompatActivity {
         exc9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e9 = new Intent(ViewExercises.this,TricepExercises.class);
+                Intent e9 = new Intent(ViewExercises.this, TricepExercises.class);
                 startActivity(e9);
             }
         });
@@ -116,7 +116,7 @@ public class ViewExercises extends AppCompatActivity {
         exc10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e10 = new Intent(ViewExercises.this,ShouldersExercises.class);
+                Intent e10 = new Intent(ViewExercises.this, ShouldersExercises.class);
                 startActivity(e10);
             }
         });
@@ -124,7 +124,7 @@ public class ViewExercises extends AppCompatActivity {
         exc11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e11 = new Intent(ViewExercises.this,HamstringExercises.class);
+                Intent e11 = new Intent(ViewExercises.this, HamstringExercises.class);
                 startActivity(e11);
             }
         });
@@ -132,7 +132,7 @@ public class ViewExercises extends AppCompatActivity {
         exc12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e12 = new Intent(ViewExercises.this,QuadricepExercises.class);
+                Intent e12 = new Intent(ViewExercises.this, QuadricepExercises.class);
                 startActivity(e12);
             }
         });
@@ -140,7 +140,7 @@ public class ViewExercises extends AppCompatActivity {
         exc13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e13 = new Intent(ViewExercises.this,GlutesExercises.class);
+                Intent e13 = new Intent(ViewExercises.this, GlutesExercises.class);
                 startActivity(e13);
             }
         });
@@ -148,7 +148,7 @@ public class ViewExercises extends AppCompatActivity {
         exc14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e14 = new Intent(ViewExercises.this,BackExercises.class);
+                Intent e14 = new Intent(ViewExercises.this, BackExercises.class);
                 startActivity(e14);
             }
         });
@@ -156,7 +156,7 @@ public class ViewExercises extends AppCompatActivity {
         exc15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e15 = new Intent(ViewExercises.this,CalvesExercises.class);
+                Intent e15 = new Intent(ViewExercises.this, CalvesExercises.class);
                 startActivity(e15);
             }
         });
@@ -164,13 +164,12 @@ public class ViewExercises extends AppCompatActivity {
         exc16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e15 = new Intent(ViewExercises.this,TrapeziusExercises.class);
+                Intent e15 = new Intent(ViewExercises.this, TrapeziusExercises.class);
                 startActivity(e15);
             }
         });
 
     }
-
 
 
 }

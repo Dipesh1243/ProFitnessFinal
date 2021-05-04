@@ -19,11 +19,11 @@ public class CardioAdapter extends RecyclerView.Adapter<CardioAdapter.CardioView
         void OnItemClick(int position);
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener){
+    public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
 
-    public static class CardioViewHolder extends RecyclerView.ViewHolder{
+    public static class CardioViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView mImageView;
         public TextView mTextView1;
@@ -38,9 +38,9 @@ public class CardioAdapter extends RecyclerView.Adapter<CardioAdapter.CardioView
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (listener != null){
+                    if (listener != null) {
                         int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION){
+                        if (position != RecyclerView.NO_POSITION) {
                             listener.OnItemClick(position);
                         }
                     }
@@ -49,7 +49,7 @@ public class CardioAdapter extends RecyclerView.Adapter<CardioAdapter.CardioView
         }
     }
 
-    public  CardioAdapter(ArrayList<CardioItems> cardioList){
+    public CardioAdapter(ArrayList<CardioItems> cardioList) {
         mCardioList = cardioList;
     }
 
@@ -62,10 +62,10 @@ public class CardioAdapter extends RecyclerView.Adapter<CardioAdapter.CardioView
 
     @Override
     public void onBindViewHolder(@NonNull CardioViewHolder holder, int position) {
-    CardioItems currentItem = mCardioList.get(position);
+        CardioItems currentItem = mCardioList.get(position);
 
-    holder.mImageView.setImageResource(currentItem.getmImageResource());
-    holder.mTextView1.setText(currentItem.getMtext1());
+        holder.mImageView.setImageResource(currentItem.getmImageResource());
+        holder.mTextView1.setText(currentItem.getMtext1());
         holder.mTextView2.setText(currentItem.getMtext2());
     }
 

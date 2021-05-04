@@ -2,7 +2,7 @@ package com.example.profitness;
 
 public class DataPoint {
 
-     int xValue, yValue;
+    int xValue, yValue;
 
     public DataPoint() {
 

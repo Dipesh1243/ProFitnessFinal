@@ -19,7 +19,7 @@ import com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText;
 
 public class Register extends AppCompatActivity {
 
-    EditText emailID, password, confirmpassword, fullname,age;
+    EditText emailID, password, confirmpassword, fullname, age;
     PrefixSuffixEditText height, weight;
     Button btnRegister;
     TextView tvSignin;
@@ -56,56 +56,50 @@ public class Register extends AppCompatActivity {
                 String pwd = password.getText().toString();
                 String pwd2 = confirmpassword.getText().toString();
                 String fn = fullname.getText().toString();
-                String agenum= age.getText().toString();
+                String agenum = age.getText().toString();
                 String heightr = height.getText().toString();
                 String weightr = weight.getText().toString();
 
-                user = new User(fn, agenum,heightr,weightr);
+                user = new User(fn, agenum, heightr, weightr);
 
-                if(em.isEmpty()){
+                if (em.isEmpty()) {
                     emailID.setError("Please enter Email Address");
                     emailID.requestFocus();
                 }
 
-                if(fn.isEmpty()){
+                if (fn.isEmpty()) {
                     fullname.setError("Please enter fullname");
                     fullname.requestFocus();
                 }
 
-                if(agenum.isEmpty()){
+                if (agenum.isEmpty()) {
                     age.setError("Please enter age");
                     age.requestFocus();
                 }
 
-                if(heightr.isEmpty()){
+                if (heightr.isEmpty()) {
                     height.setError("Please enter height ");
                     height.requestFocus();
                 }
 
-                if(weightr.isEmpty()){
+                if (weightr.isEmpty()) {
                     weight.setError("Please enter weight ");
                     weight.requestFocus();
-                }
-
-                else if(pwd.isEmpty()){
+                } else if (pwd.isEmpty()) {
                     password.setError("Please enter Password");
                     password.requestFocus();
-                }
-                else if(!pwd2.equals(pwd)){
+                } else if (!pwd2.equals(pwd)) {
                     password.setError("Passwords do not match");
                     password.requestFocus();
-                }
-                else if(em.isEmpty() && pwd.isEmpty()){
-                    Toast.makeText(Register.this,"Fields are empty!",Toast.LENGTH_SHORT).show();
-                }
-                else if(!(em.isEmpty() && pwd.isEmpty())){
+                } else if (em.isEmpty() && pwd.isEmpty()) {
+                    Toast.makeText(Register.this, "Fields are empty!", Toast.LENGTH_SHORT).show();
+                } else if (!(em.isEmpty() && pwd.isEmpty())) {
                     mFirebaseAuth.createUserWithEmailAndPassword(em, pwd).addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful()){
-                                Toast.makeText(Register.this,"Account already exists",Toast.LENGTH_SHORT).show();
-                            }
-                            else{
+                            if (!task.isSuccessful()) {
+                                Toast.makeText(Register.this, "Account already exists", Toast.LENGTH_SHORT).show();
+                            } else {
                                 FirebaseUser user = mFirebaseAuth.getCurrentUser();
                                 updateUI(user);
                                 startActivity(new Intent(Register.this, Menu.class));
@@ -113,9 +107,8 @@ public class Register extends AppCompatActivity {
                             }
                         }
                     });
-                }
-                else {
-                    Toast.makeText(Register.this,"Error Occurred",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Register.this, "Error Occurred", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -130,7 +123,7 @@ public class Register extends AppCompatActivity {
 
     }
 
-    public void updateUI(FirebaseUser currentuser){
+    public void updateUI(FirebaseUser currentuser) {
         //String KeyID = mDatabase.push().getKey();
         mDatabase.child(currentuser.getUid()).setValue(user);
     }

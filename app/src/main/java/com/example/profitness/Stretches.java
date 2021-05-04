@@ -47,10 +47,9 @@ public class Stretches extends AppCompatActivity {
         });
 
 
-
     }
 
-    public void CreateStretchList(){
+    public void CreateStretchList() {
         stretchesList = new ArrayList<>();
         stretchesList.add(new StretchesItems(R.drawable.hamstringstetch, "Standing Hamstring ", "Neck, Back, Glutes, Hamstrings, Calves"));
         stretchesList.add(new StretchesItems(R.drawable.piriformis, "Piriformis", "Hips, Back, Glutes"));
@@ -67,7 +66,7 @@ public class Stretches extends AppCompatActivity {
         stretchesList.add(new StretchesItems(R.drawable.pectoralis, "Pectoralis", "Chest, Arms"));
     }
 
-    public void BuildRecyclerViewStretch(){
+    public void BuildRecyclerViewStretch() {
         mRecyclerView = findViewById(R.id.stretchrecyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
@@ -166,10 +165,10 @@ public class Stretches extends AppCompatActivity {
         });
     }
 
-    private void filter(String text){
+    private void filter(String text) {
         ArrayList<StretchesItems> filteredList = new ArrayList<>();
-        for (StretchesItems item : stretchesList){
-            if (item.getMtext1().toLowerCase().contains(text.toLowerCase()) | item.getMtext2().toLowerCase().contains(text.toLowerCase())){
+        for (StretchesItems item : stretchesList) {
+            if (item.getMtext1().toLowerCase().contains(text.toLowerCase()) | item.getMtext2().toLowerCase().contains(text.toLowerCase())) {
                 filteredList.add(item);
             }
         }

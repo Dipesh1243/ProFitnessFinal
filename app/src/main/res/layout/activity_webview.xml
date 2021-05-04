@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="30dp"
-    >
+    android:paddingHorizontal="30dp">
 
-        <WebView
-            android:id="@+id/webviewvideo"
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="BMI Calculator"
-            android:textColor="#03A9F4"
-            android:textSize="40dp"
-            android:textStyle="bold" />
+    <WebView
+        android:id="@+id/webviewvideo"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="BMI Calculator"
+        android:textColor="#03A9F4"
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/backweb"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="#03A9F4"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="Return to menu"
-            android:textAllCaps="false" />
+    <Button
+        android:id="@+id/backweb"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Return to menu"
+        android:textAllCaps="false" />
 
 
 </LinearLayout>
